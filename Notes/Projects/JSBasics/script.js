@@ -123,6 +123,83 @@ let charlie = {
 // console.log(charlie.calcAge(2023, charlie.birthYear));
 // console.log(charlie["calcAge"](2023, charlie.birthYear));
 
-console.log(`Using property: ${charlie.age}`); // Prints: Using property: undefined (because the property has not been created yet)
-console.log(`Using function: ${charlie.calcAge(2020)}`); // Prints: Using function: 30
-console.log(`Using property: ${charlie.age}`); // Prints: Using property: 30
+// console.log(`Using property: ${charlie.age}`); // Prints: Using property: undefined (because the property has not been created yet)
+// console.log(`Using function: ${charlie.calcAge(2020)}`); // Prints: Using function: 30
+// console.log(`Using property: ${charlie.age}`); // Prints: Using property: 30
+
+("use strict");
+
+// This is how you select elements using JS
+// The argument being passed into the querySelector follows the same format that you
+// would have used in case you were using CSS selectors. i.e.
+
+// In order to select a class named 'message':
+// console.log(document.querySelector(".message")); // Prints: <p class="message">Start guessing...</p>
+
+// In order to select an ID named 'heading':
+// console.log(document.querySelector("#heading")); // Prints: <p class="message">Start guessing...</p>
+
+// You can also select an element by id as follows. Note, now we do not need the # symbol to precede the class name
+// console.log(document.getElementById("heading")); // Prints: <p class="message">Start guessing...</p>
+
+// In order to select the <p> element:
+// Note that this will select ONLY the very FIRST <p> element that it encounters
+// console.log(document.querySelector("p"));
+
+// If you want to select EVERY <p> element:
+// For now you can assume that NodeList is an array
+// console.log(document.querySelectorAll("p")); // Prints: NodeList(4) [p.between, p.message, p.label-score, p.label-highscore]
+// You can loop through each element
+const allElements = document.querySelectorAll("p");
+// for (let i = 0; i < allElements.length; i++) {
+//   // You can get the text content within each <p>
+//   console.log(allElements[i].textContent);
+// }
+/*
+ The above for loop Prints:
+ (Between 1 and 20)
+ Start guessing...
+ Score: 20
+ Highscore: 0
+*/
+
+// Similar to getting the test content, we can also set the text content of an element through JS
+document.querySelector(".message").textContent = "Another Message now!";
+// console.log(document.querySelector(".message")); // Prints: <p class="message">Another Message now!</p>
+
+// Note the 'input' element in the HTML page.
+// In order to read or write the value contained in the input element, we use the 'value' property
+// console.log(document.querySelector(".guess").value);
+// document.querySelector(".guess").value = 21;
+const systemNum = Math.round(20 * Math.random(), 0);
+console.log(systemNum);
+console.log(` After change: ${document.querySelector(".guess").value}`); // Prints: After change: 21
+document.querySelector(".check").addEventListener("click", function () {
+  // We are also converting the value to a number type because the default type that is read from the input is string
+  const guessedValue = Number(document.querySelector(".guess").value);
+  console.log(guessedValue);
+});
+
+document.querySelector(".again").addEventListener("click", function () {
+  const guess = Number(document.querySelector(".guess").value);
+  console.log(guess);
+  document.querySelector(".guess").value = 0;
+  const guess1 = Number(document.querySelector(".guess").value);
+  console.log(guess1);
+});
+const guessedValue = Number(document.querySelector(".guess").value);
+if (guessedValue === systemNum) {
+  document.querySelector(".message").textContent = "Congratulations";
+}
+
+document
+  .querySelector(".change-bg-color")
+  .addEventListener("click", function () {
+    let color = document.querySelector("body").style.backgroundColor;
+    console.log(color);
+    if (color == "red") {
+      document.querySelector("body").style.backgroundColor = "yellow";
+    } else {
+      document.querySelector("body").style.backgroundColor = "red";
+    }
+  });
