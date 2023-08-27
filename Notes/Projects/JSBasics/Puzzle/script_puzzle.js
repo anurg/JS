@@ -178,6 +178,10 @@ document.querySelector(".check").addEventListener("click", function () {
   // We are also converting the value to a number type because the default type that is read from the input is string
   const guessedValue = Number(document.querySelector(".guess").value);
   console.log(guessedValue);
+
+  if (guessedValue === systemNum) {
+    document.querySelector(".message").textContent = "Congratulations";
+  }
 });
 
 document.querySelector(".again").addEventListener("click", function () {
@@ -187,10 +191,6 @@ document.querySelector(".again").addEventListener("click", function () {
   const guess1 = Number(document.querySelector(".guess").value);
   console.log(guess1);
 });
-const guessedValue = Number(document.querySelector(".guess").value);
-if (guessedValue === systemNum) {
-  document.querySelector(".message").textContent = "Congratulations";
-}
 
 document
   .querySelector(".change-bg-color")
