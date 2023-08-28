@@ -79,7 +79,7 @@ const workingHours = {
 const {
   fri: { open, close },
 } = workingHours;
-console.log(open, close);
+// console.log(open, close);
 
 const printPersonDetailsUsingObj = function (person) {
   console.log(
