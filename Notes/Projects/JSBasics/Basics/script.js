@@ -98,8 +98,45 @@ const alice = {
   dob: "1/1/1990",
   birthPlace: "New York",
   job: "Teacher",
-  hobbies: ["rock climbing", "pottery"],
+  hobbies: ["rock climbing", "pottery", "Music"],
 };
 
 // printPersonDetailsUsingObj(alice);
 // printPersonDetailsUsingObjDec(alice);
+const myArray1 = [5, 6, 7, 8];
+const newArray = [1, 2, 3, 4, ...myArray1];
+// console.log(newArray);
+// console.log(...newArray);
+
+// const myArray3 = [1, 2, 3, 4, myArray1];
+// console.log(myArray3);
+// const aliceString = JSON.stringify(alice);
+// console.log(aliceString);
+// const aliceParse = JSON.parse(aliceString);
+// console.log(aliceParse);
+// const myArray4 = newArray.map((e, index) => 4 * e);
+// console.log(myArray4);
+
+// const newArray1 = [1, 2, 3, 4, myArray1];
+// const newArray1Copy = JSON.parse(JSON.stringify(newArray1));
+// console.log(newArray1Copy);
+// const { name, ...restAlice } = alice;
+// console.log(name, restAlice);
+
+const addMultipleNumbers = function (...numbers) {
+  console.log(`Args is: ${numbers} of type ${typeof numbers}`);
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(`The final sum is ${sum}`);
+};
+addMultipleNumbers(1, 2);
+addMultipleNumbers(1, 2, 3, 4);
+addMultipleNumbers(1, 2, 3, 4, 5);
+const arraysAsArgs = [1, 2, 3, 4, 5, 6];
+addMultipleNumbers(...arraysAsArgs);
+
+for (const [idx, hobby] of alice.hobbies.entries()) {
+  console.log(`Hobby: ${idx} --- ${hobby}`);
+}
