@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 // const myArray = [0, 1, 2, 3];
 
@@ -140,3 +141,6 @@ addMultipleNumbers(...arraysAsArgs);
 for (const [idx, hobby] of alice.hobbies.entries()) {
   console.log(`Hobby: ${idx} --- ${hobby}`);
 }
+=======
+
+>>>>>>> f86aeb51dcff13dbab64c7f27010e0abdaa36ee7
