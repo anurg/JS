@@ -118,3 +118,12 @@ Map the array into an array of zeros and ones.
 Reduce the array of zeros and ones into the sum.
 The final output gives the count of elements that satisfy a condition.
 Take a look at the following code, where we find the elements of type string.
+
+```
+const arr = ["Hello", 1, true, NaN, "Bye", "Byebye"]; // initialise an array of elements
+
+const num = arr
+  .map((e) => (typeof e === "string" ? 1 : 0))
+  .reduce((acc, val) => acc + val);
+console.log(num);
+```
