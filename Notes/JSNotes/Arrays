@@ -1,0 +1,25 @@
+### My Notes on Javascript Arrays
+
+### Arrays Methods
+
+### forEach
+
+forEach is applied to each element of array
+
+```
+arr.forEach(<Callbackfunction>);
+function callbackfn(value: any, index: number, array: any[])
+```
+
+Examples-
+
+```
+const arr = [1, 2, 3, 4, 5];
+const newArray = [];
+arr.forEach((val, ind, arr) => {
+  newArray.push(val + ind);
+  // console.log(`val: ${val} index: ${ind} array: ${arr}`);
+});
+console.log(arr);
+console.log(newArray);
+```
