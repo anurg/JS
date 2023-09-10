@@ -127,3 +127,19 @@ const num = arr
   .reduce((acc, val) => acc + val);
 console.log(num);
 ```
+
+### Finding number of elements in a two-dimensional array
+
+Another common coding task: finding the number of elements in a two-dimensional array. Again, we can use the map and reduce methods to do this task in one line! Use the following steps.
+
+Map the array into the length of each array at each index.
+Reduce the array of lengths into the sum.
+The final output gives the count of elements in a two-dimensional array.
+
+```
+let arr = [[1, 2, 3, 4, 3], [1, 2], [1, 2, 3, 4, 5, 6], []]; // `initialise a two-dimensional array
+
+const element = arr.map((x) => x.length).reduce((acc, val) => acc + val);
+console.log(element);
+
+```
