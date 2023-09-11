@@ -65,3 +65,159 @@
 </html>
 
 ```
+
+### Linking Javascript file to HTML file
+```
+<script src="myJSscript.js"></script>
+```
+
+### Linking external CSS file to HTML file
+
+```
+<link rel="stylesheet" href="cssfilename.css">
+```
+HTML Elements
+<h1>: Highest-level heading
+<h6>: Lowest-level heading
+<img>: An image
+<a>: An anchor which creates a hyperlink to things like other HTML pages, files, email addresses, and more
+
+The first line, <!DOCTYPE html>, is referred as a doctype declaration. This is used to indicate to a browser what HTML version the file is written in. For this file, specifying html indicates that the file is written in HTML5.
+
+ One of the properties of HTML elements is their ability to be nested. In other words, HTML elements can exist within other HTML elements. This gives rise to an interesting structure, referred to most commonly as a tree data structure in computer science lingo.
+
+ The <head> element contains supporting information about the file, commonly referred to as metadata. There must be a <title> (providing the webpage a title) directly underneath the <head> element in order be complete. The <head> element may also contain links to Javascript files and CSS stylesheets.
+
+The <body> element contains the main content of an HTML file. This is the element that holds the information that is rendered by your web browser. There can be only one <body> element within an HTML file, and most of the HTML you write will exist within this element.
+
+Within the <body> element of this file, we have a high-level heading (<h1>) and a paragraph (<p>).
+
+### HTML attributes
+HTML attributes provide additional information about an HTML element. Attributes can be considered as properties of the element. An element may have a single attribute, many attributes, or no attributes at all.
+
+```
+<h2 title="This is a subheading">Hello, World!</h2>
+ <div class="SampleClass"></div>
+ 
+<p title="My Paragraph" style="color:blue">Hello, World!</p>
+```
+
+### Anchor elements / hyperlinking 
+One of the most important aspects of the World Wide Web is the ability to link to other parts of the web. Without a way to redirect our HTML page to other web addresses, there really wouldn’t be a “web” at all!
+We can connect a HTML page to other web pages by creating a hyperlink using the anchor tag, like so:
+```
+<a href="http://www.google.com">Google</a>
+```
+The href attribute refers to Hypertext Reference, whose value is a Uniform Resource Locator (URL). A URL is basically fancy lingo for a web address, or the destination the link is pointing to. The href attribute can also refer to things like:
+
+Email Addresses (mailto:someone@educative.io)
+Phone Numbers (tel:+18004444444)
+Documents/Files (Give the URL of the file instead of a web page)
+Another different location on the same web page the browser is currently on
+
+### Relative vs absolute URL paths 
+It’s important to understand how file paths play a role in how your hyperlinks will operate.
+
+An absolute URL points to a single address that will direct to the same place regardless of where the original page is coming from. It looks something like this: http://www.github.com/google.
+
+In an absolute URL path there are three main components:
+
+1. The Protocol: What you most often see as http:// or https:// when you browse websites, but can be other things, like file:// or ftp://
+
+2. The Domain: The name of the website (in this example, www.github.com)
+
+3. The Path: The directory (or folder) we wish to navigate to. This field is not always necessary, and generally allows us to navigate to a more specific portion of a domain (in this case, Google’s profile on Github)
+
+An absolute URL provides all the information necessary for a browser with an internet connection to reach the desired address. Furthermore, an absolute URL will not change its destination if used on different devices/browsers.
+
+### Relative URLs
+Relative URLs provide less information than absolute URLs and generally refer to pages on the same domain. Relative URLs are useful when you start to deal with multiple web pages on your site, and want a way to navigate between them.
+
+Let’s take a look at a quick example of a directory named website with:
+
+a main index.html page
+an about section, named about.html
+a nested directory named blogPosts, with three article HTML files named:
+article1.html
+article2.html
+article3.html
+If we started in the website directory on the index.html file, we could redirect to the About section by including the anchor tag:
+```
+<a href="about.html">About</a>
+```
+
+Now, say we want to navigate to an article in our blogPost folder. The relative URL path would then include the directory name: blogPost/article2.html. The entire anchor element would then be:
+```
+<a href="blogPost/article2.html">Article 2</a>
+```
+
+Now, how would we navigate back to the index.html page if we are in the blogPost directory? We can accomplish this by indicating the path to the file is one direct level up, like so: ../index.html.
+```
+<a href="../index.html">Index</a>
+```
+
+### Headings
+The HTML standard has h1 element as well as five additional text heading elements, appropriately named h2 through h6.
+
+It should be noted that heading elements should not be used to manipulate the font size of a heading. Rather, the levels represent semantically the difference between a main header, sub-header, etc.
+
+### Lists
+Often times we will want to include a bulleted or numbered list in web page content. This can be accomplished with HTML lists.
+
+### Unordered lists
+We could create an unordered list to represent things like a list of to-dos or a list of grocery items. To do this, we must use the <ul> tag, with nested <li> tags for the list items.
+
+### Ordered lists
+An ordered list should be used when the items in the list go in a particular order, like turn-by-turn instructions on a navigation system, or steps in a recipe. An ordered list is fairly similar to an unordered list, except we will want to use the <ol> tag to declare the list. List items are still wrapped in an <li> tag. The list items will be numbered, rather than the bulleted items we saw previously.
+
+### List element attributes: type and start
+The type attribute allows us to change the style of either the bullets for unordered lists or the numbering scheme for ordered lists.
+
+Unordered list type values include circle, disc, and square.
+
+```
+<ul type="square">
+      <h4>Unordered List</h4>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+    <ol start="7">
+      <h4>Ordered List</h4>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ol>
+```
+
+Ordered list type values can be used to change the numbering scheme, and include the following:
+
+1: Default numeric scheme
+I: Upper-case Roman numerals
+i: Lower-case Roman numerals
+A: Upper-case Alphabet
+a: Lower-case Alphabet
+Ordered lists have an additional start attribute, that can be used to start the numbering at a value other than the default of 1.
+### Sample-
+```
+<html>
+ <head>
+   <title>Exercise 5: Structuring a Page for Cooking a Food Recipe</title>
+ </head>
+ <body>
+	<!-- Write your recipe here -->
+    <h1>Recipe</h1>
+    <h2>Ingredients</h2>
+    <ul type=square> 
+        <li>Ingredient 1</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol type="i"> 
+        <li>Instructions1</li>
+    </ol>
+ </body>
+</html>
+
+```
