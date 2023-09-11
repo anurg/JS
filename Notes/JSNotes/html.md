@@ -1,3 +1,7 @@
+### HTML Notes
+
+### Sample HTML file with Common tags.
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -59,3 +63,5 @@
     <script src="script.js" />
   </body>
 </html>
+
+```
