@@ -221,3 +221,49 @@ Ordered lists have an additional start attribute, that can be used to start the 
 </html>
 
 ```
+
+### Inline vs. Block Elements + Divs
+
+### Block-level elements
+Block-level HTML elements take up the full width of a web page, essentially creating a “block” around the content you place within that element. Block-level elements, by default, also start on a new line. The following are some of the block-level elements:
+
+- Headings (<h1>-<h6>)
+- Ordered and Unordered Lists (<ol>, <ul>)
+- List Items (<li>)
+- Paragraphs (<p>)
+
+### Inline elements
+Inline elements, like the name suggests, do not take up the full width of a webpage and are generally in-line with text content. Inline elements also do not start a new line when rendered in the browser. Examples of inline elements include:
+
+- Anchors (<a>)
+- Images (<img>)
+- Bolding Text (<strong>)
+- Emphasizing Text (<em>)
+
+### Divs
+The <div>, a block-level element, allows you to section into separate, logical divisions.
+As you can see, the <div> element does not render as anything special on the web page and is mainly used to separate content into distinct groups for organization or styling purposes. Generally, you will nest other HTML elements within <div> elements to provide the proper structure to your page.
+
+### id + class attributes 
+The id and class attributes can be used to identify specific HTML elements across your HTML page.
+
+The id attribute provides you with the ability to give any element a unique identifier. This identifier can later be used for things like applying specific styles with CSS or capturing input with some Javascript code.
+
+```
+<h1 id="companyName">Educative.io</h1>
+```
+
+Some notes about id usage:
+
+an id value should only be used for a single element (you will get unexpected behavior if you use the same id value for multiple elements)
+an id value must not contain any whitespace
+a single element cannot have multiple id values
+The class attribute is similar to the id attribute in that it is used to identify specific elements. The main distinctions are:
+
+the same class value can be used across multiple elements
+an element can have multiple class values, separated by whitespaces
+In the example below, the id and class attributes are used to apply CSS styles (hidden) to our HTML document. Take note of the main differences between the two attributes.
+
+```
+
+```
