@@ -497,5 +497,297 @@ Use the 'time' element to provide a machine-readable timestamp for parts of your
  </body>
 </html>
 ```
+### CSS file for above exercise
+```
+* {
+  font-family: "Helvetica Neue", "Helvetica", arial, sans-serif; 
+}
+
+header h1 {
+  font-weight: bolder;
+  font-size: 3em;
+  margin: 0px 10px;
+}
+
+header h2 {
+  font-weight: lighter;
+  margin: 0px 10px 10px;
+}
+
+header nav {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0; 
+  padding: 0;
+  width: 100%;
+  background-color: #d9e4f4;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  background-color: #364b6b;
+  color: white;
+}
+
+article {
+  margin: 5% 2%;
+}
+
+article hgroup {
+  border-left: 5px solid red;
+}
+
+article hgroup h1 {
+  margin: 0px 10px;
+  font-size: 2.3em;
+}
+
+article hgroup h2 {
+  margin: 0px 10px 10px;
+  font-weight: lighter;
+}
+
+article hgroup h3 {
+  margin: 5px 10px 10px;
+  font-weight: normal;
+}
+
+article section {
+  width: 90%;
+  margin: 10px 10px;
+}
+
+article section h4 {
+  font-size: 1.3em;
+  font-weight: lighter;
+  margin: 30px 10px 10px;
+}
+
+article section p {
+  margin: 10px 20px;
+}
+
+code {
+  font-family: "Menlo", monospace;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  padding: 2px 4px;
+ 	border-radius: 5px;
+}
+
+footer p {
+  color: #9b9b9b;
+  border-top: 1px solid #9b9b9b;
+	padding: 10px;
+}
+```
+### HTML Tables
+
+ A table consists of rows and columns. Each row/column pair has a piece of data associated with it, referred to as a table cell.
+
+In the table above, the first row is used to declare the data type for each column, and serves as the table header. For the rest of the rows, we have a piece of data for each column (the cells), which has the data type specified in the header.
+
+To indicate that a cell is part of the header use the 'th' tag instead of 'td'
+```
+<html>
+ <head>
+   <title>Working with HTML Tables</title>
+ </head>
+ <body>
+   <table>
+     <tr>
+       <th>Name</th>
+       <th>Date of Birth</th>
+       <th>Weight</th>
+     </tr> 
+     <tr>
+       <td>Mary</td>
+       <td>12/13/1994</td>
+       <td>130</td>
+     </tr> 
+     <tr>
+    <td>John</td>
+    <td>10/08/1974</td>
+    <td>150</td>
+     </tr>   
+   </table>
+ </body>
+</html>
+```
+
+### HTML Forms
+
+HTML forms are how we receive user input on our web pages. If you’ve ever visited a blog and left a comment or used your credit card online to purchase something, you have used HTML forms to interact with the web page you were visiting.
+### form element
+'form' element only declares the HTML form.
+### input element
+
+To start accepting user input, let’s add an 'input' element that accepts text:
+### label element
+
+The 'label' element has a for attribute that associates the 'label' with a specific 'input' element. The for attribute’s value should match that of the 'input' element’s id value. 'label' elements are useful as they allow your 'input' elements to be identified by screen readers.
+
+Notice if you write in the password field, the text is obscured since we’ve indicated the input's type attribute has a value of password.
+
+### Text inputs
+
+We’ve seen how the 'input' element can accept text values. There are several different type values that can be used, including:
+
+text: for plain text
+password: to obscure a password input field
+search: to indicate the text field is used for searching a page/multiple pages
+url: validates input as a URL address
+tel: for inputting phone numbers
+email: validates input as an email address
+In the case of url and email, the browser will check to see if the input is a valid URL or email address.
+
+### textarea
+If you want your user to be able to include new lines (by pressing return) in their text input, you can use a 'textarea 'element:
+You can also specify the size of 'textarea' by using the rows and cols attributes.
+
+### Buttons
+A <'button'> element should be used whenever you want to create a clickable button to perform some action on the page.
+
+<'button'> elements are simple to define, and have three different type values:
+
+submit: submits form data to a server
+reset: resets all the data in the current form
+button: no default behavior.
+
+### Selection inputs
+You can use <'select'> (with nested <'option'>) elements to create a drop-down selection of items that a user can choose from:
+
+Including the selected attribute in an <'option'> element will show that option by default.
+
+Additionally, if you want to group options into different categories, you can nest <'option'> elements in an <'optgroup'> element:
+
+### Radio Button
+The <'input'> element has other type values that accept inputs other than text. For instance, radio buttons can be used to create a list of options where you only want one option selected:
+
+To group the radio buttons into one selection, each <'input'> element’s name attribute must have the same value. The optional checked attribute will select one of the radio buttons when the page loads.
+
+### checkboxes
+If you want to create a list where the user can select multiple options, you can use checkboxes. A checkbox can be specified by using an <'input'> element with a type value checkbox:
+
+Like radio <'input'> elements, checkboxes must have the same value for the name attribute to be considered part of the same group. The main difference is that multiple checkboxes within the same group can be selected.
 
 
+```
+<h1>Login Page</h1>
+    <form>
+      <label for="username">
+        Username:
+        <input type="text" id="username" name="" username />
+      </label>
+      <label for="password">
+        Password:
+        <input type="password" id="password" name="password" />
+      </label>
+      <label for="emailid">
+        Email Id:
+        <input type="email" id="emailid" name="emailid" />
+      </label>
+      <label for="url">
+        URL:
+        <input type="url" id="url" name="url" />
+      </label>
+      <label for="multiLineInput">
+        <p>This is an input element that can include new lines:</p>
+        <textarea id="multiLineInput"></textarea>
+      </label>
+      <label for="selector">
+        <p>
+          A <code>select</code> element allows users to input from a selection:
+        </p>
+        <select id="selector">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option selected>Option 3</option>
+          <option>Option 4</option>
+        </select>
+      </label>
+      <label for="selector">
+        <p>
+          A <code>select</code> element allows users to input from a selection:
+        </p>
+        <select id="selector">
+          <optgroup label="Group 1">
+            <option>Option 1</option>
+            <option>Option 2</option>
+          </optgroup>
+          <optgroup label="Group 2">
+            <option>Option 3</option>
+            <option>Option 4</option>
+          </optgroup>
+          <optgroup label="Group 3">
+            <option>Option 5</option>
+            <option>Option 6</option>
+          </optgroup>
+        </select>
+      </label>
+      <h3>
+        What time is best to give you a call?--With same name so only one option
+        can be selected.
+      </h3>
+      <label for="morning">
+        Morning
+        <input type="radio" id="morning" name="callTime" checked />
+      </label>
+      <label for="afternoon">
+        Afternoon
+        <input type="radio" id="afternoon" name="callTime" />
+      </label>
+      <label for="evening">
+        Evening
+        <input type="radio" id="evening" name="callTime" />
+      </label>
+
+      <!-- The following radio buttons will not be considered part of the same group since they don't have
+				the same "name" attribute. -->
+      <h3>
+        What time is best to give you a call?-- Without same name so multiple
+        options can be selected.
+      </h3>
+      <label for="morning">
+        Morning
+        <input type="radio" id="morning" />
+      </label>
+      <label for="afternoon">
+        Afternoon
+        <input type="radio" id="afternoon" />
+      </label>
+      <label for="evening">
+        Evening
+        <input type="radio" id="evening" />
+      </label>
+      <h4>CheckBoxes</h4>
+      <h3>Select all the times that you are available:</h3>
+      <label for="morning">
+        Morning
+        <input type="checkbox" id="morning" name="callTime" checked />
+      </label>
+      <label for="afternoon">
+        Afternoon
+        <input type="checkbox" id="afternoon" name="callTime" />
+      </label>
+      <label for="evening">
+        Evening
+        <input type="checkbox" id="evening" name="callTime" />
+      </label>
+      <button type="submit">Submit Name</button>
+    </form>
+```
