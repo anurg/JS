@@ -248,10 +248,10 @@ Ordered lists have an additional start attribute, that can be used to start the 
 
 Block-level HTML elements take up the full width of a web page, essentially creating a “block” around the content you place within that element. Block-level elements, by default, also start on a new line. The following are some of the block-level elements:
 
-- Headings (<h1>-<h6>)
-- Ordered and Unordered Lists (<ol>, <ul>)
-- List Items (<li>)
-- Paragraphs (<p>)
+- Headings (h1-h6)
+- Ordered and Unordered Lists (ol, ul)
+- List Items (li)
+- Paragraphs (p)
 
 ### Inline elements
 
