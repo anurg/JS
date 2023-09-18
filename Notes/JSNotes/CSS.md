@@ -33,3 +33,5 @@ You can do so by writing a self-closing link tag in your HTML head like the foll
 ```
 <link rel="stylesheet" href="cssfilename.css">
 ```
+
+CSS files comprise a set of rules, each of which consists of a selector (to indicate which elements you are trying to modify), followed by a declaration block that contains a set of properties and those properties’ values.
