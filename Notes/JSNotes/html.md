@@ -257,10 +257,10 @@ Block-level HTML elements take up the full width of a web page, essentially crea
 
 Inline elements, like the name suggests, do not take up the full width of a webpage and are generally in-line with text content. Inline elements also do not start a new line when rendered in the browser. Examples of inline elements include:
 
-- Anchors (<a>)
-- Images (<img>)
-- Bolding Text (<strong>)
-- Emphasizing Text (<em>)
+- Anchors (a)
+- Images (img)
+- Bolding Text (strong)
+- Emphasizing Text (em)
 
 ### Divs
 
