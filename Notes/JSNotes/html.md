@@ -81,10 +81,10 @@
 
 HTML Elements
 
-<h1>: Highest-level heading
-<h6>: Lowest-level heading
-<img>: An image
-<a>: An anchor which creates a hyperlink to things like other HTML pages, files, email addresses, and more
+h1: Highest-level heading
+h6: Lowest-level heading
+img: An image
+a: An anchor which creates a hyperlink to things like other HTML pages, files, email addresses, and more
 
 The first line, <!DOCTYPE html>, is referred as a doctype declaration. This is used to indicate to a browser what HTML version the file is written in. For this file, specifying html indicates that the file is written in HTML5.
 
@@ -185,7 +185,7 @@ We could create an unordered list to represent things like a list of to-dos or a
 
 ### Ordered lists
 
-An ordered list should be used when the items in the list go in a particular order, like turn-by-turn instructions on a navigation system, or steps in a recipe. An ordered list is fairly similar to an unordered list, except we will want to use the <ol> tag to declare the list. List items are still wrapped in an <li> tag. The list items will be numbered, rather than the bulleted items we saw previously.
+An ordered list should be used when the items in the list go in a particular order, like turn-by-turn instructions on a navigation system, or steps in a recipe. An ordered list is fairly similar to an unordered list, except we will want to use the 'ol 'tag to declare the list. List items are still wrapped in an 'li' tag. The list items will be numbered, rather than the bulleted items we saw previously.
 
 ### List element attributes: type and start
 
