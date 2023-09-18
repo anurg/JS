@@ -181,7 +181,7 @@ Often times we will want to include a bulleted or numbered list in web page cont
 
 ### Unordered lists
 
-We could create an unordered list to represent things like a list of to-dos or a list of grocery items. To do this, we must use the <ul> tag, with nested <li> tags for the list items.
+We could create an unordered list to represent things like a list of to-dos or a list of grocery items. To do this, we must use the 'ul' tag, with nested 'li' tags for the list items.
 
 ### Ordered lists
 
