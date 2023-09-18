@@ -94,7 +94,7 @@ The <head> element contains supporting information about the file, commonly refe
 
 The <body> element contains the main content of an HTML file. This is the element that holds the information that is rendered by your web browser. There can be only one <body> element within an HTML file, and most of the HTML you write will exist within this element.
 
-Within the <body> element of this file, we have a high-level heading (<h1>) and a paragraph (<p>).
+Within the <body> element of this file, we have a high-level heading (h1) and a paragraph (p).
 
 ### HTML attributes
 
