@@ -352,3 +352,150 @@ Unlike most of the elements we have encountered thus far, the img element does n
  </body>
 </html>
 ```
+
+### Semantics
+
+### Structural semantic elements#
+div elements can be used to separate content into different sections. However, div elements do not provide any inherent semantic meaning and are used most often as generic containers for styling content. With HTML5, several structural elements.
+### hgroup
+'hgroup' elements can be used to group heading elements that are semantically part of the same heading.
+```
+<hgroup>
+  <h1>My Amazing Website</h1>
+  <h2>More information about my website</h2>
+</hgroup>
+
+```
+
+### nav
+'nav' elements should be used to house components of your web page that are used to navigate to different parts of your web page.
+
+A 'nav' element is often found inside a 'header' element. It is not necessary to follow this convention if you wish to place your navigation elements elsewhere on the web page.
+
+```
+<header>
+  <hgroup>
+    <h1>My Amazing Website</h1>
+    <h2>More information about my website</h2>
+  </hgroup>
+  <nav>
+    <!-- Navigational anchors elments are often wrapped in an unordered list -->
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#contact">Contace</a></li>
+    </ul>
+  </nav>
+</header>
+
+```
+
+### footer
+The 'footer' element, as its name suggests, is used to house content that would be considered to be the footer of your page.
+
+A footer can store things like the website’s author, copyright information, or even navigational elements to other pages on your website.
+
+```
+<footer>
+  <h3>&copy; My Company Name, 2023</h3>
+</footer>
+```
+### article
+'article' elements should be used to house individual pieces of content that are unique to an individual page. A blog entry, a news/scholarly article, and a forum post are all good examples of content that would be semantically appropriate to store in an 'article' element.
+
+'article 'elements should have a heading to indicate what the article's content is about.
+```
+<article>
+  <h1>Cryptocurrency: What is it?</h1>
+  <!-- Article contents -->
+</article>
+```
+### section
+'section' elements represent thematic groupings of content on your web page. For example, if your web page housed the contents of a book, 'section' elements could be used for the book’s chapters.
+
+'section' elements should also have a heading element to indicate what the section's contents are about.
+
+In general, 'section' elements should be used when you need to place your content into semantic groupings that don’t fit the description of any other semantic element.
+
+'section' elements can also be used to break up content in an 'article' element into semantically discrete components.
+```
+<section>
+  <h2>Chapter 1</h2>
+  <!-- Chapter contents -->
+</section>
+<section>
+  <h2>Chapter 2</h2>
+  <!-- Chapter contents -->
+</section>
+<section>
+  <h2>Chapter 3</h2>
+  <!-- Chapter contents -->
+</section>
+<section>
+  <h2>Chapter 4</h2>
+  <!-- Chapter contents -->
+</section>
+```
+
+### time
+Use the 'time' element to provide a machine-readable timestamp for parts of your content that indicate a specific time or date. The 'time' element has a datetime attribute that takes as input the date/time in a variety of formats, which you can learn more about here.
+
+'time' should be used for things like the time of an event or the date a blog post is published to a website. 'time' elements are not rendered any differently than regular text, but it provides a way to semantically indicate to a computer what content is to be considered a time or date.
+
+### aside
+'aside' elements are generally used to house information that is not part of your main content, but is in some way related to it.
+
+'aside' elements could be used for things like supporting information in an article, or a sidebar with navigational elements.
+
+```
+<html>
+ <head>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.js"></script>
+ </head>
+ <body>
+   <!-- Add semantic tags to this HTML -->
+   <header>
+    <hgroup>
+      <h1>Learning Web Development</h1>
+      <h2>A site dedicated to learning how to develop applications for the web.</h2>
+    </hgroup>
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About This Site</a></li>
+        <li><a href="">Contact Information</a></li>
+      </ul>
+    </nav>
+   </header>
+  <article>
+   <hgroup>
+    <h1>Using Semantic HTML Elements</h1>
+    <h2>A complete guide on indicating meaning for your web page's content</h2>
+    <h3> <time datetime="2017-12-18">December 18, 2017</time></h3>
+   </hgroup>
+  
+   <section>
+    <h4><code>header</code></h4>
+    <p>Use header elements for content that is consistent across your web page.</p>
+    <p>Headers may also contain your site's navigation components.</p>
+    </section>
+  
+    <section>
+    <h4><code>footer</code></h4>
+    <p>Use footer elements to store "footer" content, like author/copyright info.</p>
+    </section>
+    
+    <section>
+    <h4><code>nav</code></h4>
+    <p>Use nav elements to store elements associated with site navigation.</p>
+    <p>Navigational <code>anchor</code> tags are often wrapped in an unordered list element.</p>
+    </section>
+  </article>
+  <footer>  
+    <p>&copy; Educative.io 2017</p>
+  </footer>
+   
+ </body>
+</html>
+```
+
+
