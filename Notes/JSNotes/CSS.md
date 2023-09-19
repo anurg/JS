@@ -308,3 +308,123 @@ border-color: as each of the properties of the shorthand:
         border-left-color: currentcolor
 ```
 
+### border-radius 
+If you want to create borders that have rounded corners, use the border-radius property. You can also create elliptical corners by providing two values to border-radius, separated by a slash (/).
+
+```
+// HTML
+<html>
+ <head>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.js"></script>
+ </head>
+ <body>
+   <h1>Straight corners</h1>
+   <h1 class="rounded">Rounded corners</h1>
+   <h1 class="elliptical">Elliptical corners</h1>
+ </body>
+</html>
+
+//CSS
+
+h1 {
+  border: 10px solid black;
+  margin: 20px;
+}
+
+.rounded {
+	border-radius: 15px;
+}
+
+.elliptical {
+  border-radius: 50px / 25px;
+}
+```
+```
+h1 {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    padding-left:40px;
+    padding-right:20px;
+    border: 4px solid green;
+    border-radius: 10px;
+}
+//or we can write like
+h1 {
+    padding: 10px 20px;
+    border: 4px solid green;
+    border-radius: 10px;
+}
+
+
+```
+### margin 
+The margin property is very similar to the padding property, except it allows you to define the spacing around the outside of an HTML element past the border. Like padding, it allows you to define single or multiple values.
+
+margin can also be broken out into more fine-grained properties to target a specific side, including margin-top, margin-bottom, margin-right, and margin-left.
+
+```
+* 1 value: margin applied as
+	 same on all sides */
+#margin1 {
+  margin: 10px;
+}
+
+/* 2 values: margin applied as 
+	 vertical sides - horizontal sides */
+#margin2 {
+  margin: 10px 20px;
+}
+
+/* 3 values: margin applied as 
+   top - horizontal sides - bottom */
+#margin3 {
+  margin: 10px 20px 30px;
+}
+
+/* 4 values: margin applied as 
+   top - right - bottom - left */
+#margin4 {
+  margin: 10px 20px 30px 40px;
+}
+
+.spanBox {
+  border: 1px dashed black;
+  margin: 5px;
+  float: left;
+}
+
+span {
+  background-color: plum;
+  border: 5px solid green;
+  padding: 10px 20px;
+  display: inline-block;
+}
+```
+
+### Centering an HTML elemment
+
+```
+//HTML
+<html>
+ <head>
+   <title>Centering elements using margins</title>
+ </head>
+ <body>
+   <div>
+     <h1>This element should be centered.</h1>
+   </div>
+ </body>
+</html>
+
+// CSS
+div {
+  border: 5px solid blue;
+}
+
+h1 {
+  border: 5px dashed black;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+```
