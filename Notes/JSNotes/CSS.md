@@ -115,3 +115,6 @@ div > div > p {
 ```
 
 
+### CSS Box Model
+
+![MyImage](images/CSS-Box-Model.png)
