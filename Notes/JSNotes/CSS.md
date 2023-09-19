@@ -116,5 +116,55 @@ div > div > p {
 
 
 ### CSS Box Model
+Your browser renders every HTML element as a rectangular box according to the standard CSS box model. Each HTML element on your web page consists of a content area, padding, a border, and a margin.
+
+Learning how to manipulate the CSS properties within the box model will be helpful with laying out content on your web pages.
+
+### Relative vs. absolute measurements 
+We can manipulate the parameters for sizing the “box” that makes up an element with many different CSS properties. Often times, you will want to specify the length of the content area, padding, margins, etc.
+
+But how do we specify these lengths? The most common units used are percentages, %, and the number of pixels, px.
+
+Percentages are a relative measure of length. When specifying length using the % unit, the length is measured as relative to the parent element’s length:
+ince we used %, a relative unit of measurement, the length of the h1 elements in the second div are half that of the h1 elements in the first div even though these elements have the same CSS properties.
+
+Specifying the number of pixels, on the other hand, yields an absolute measure of length. Absolute measurements are fixed and do not rely on measurements from other HTML elements.
+```
+<html>
+ <head>
+   <title>Relative Length Measurements</title>
+ </head>
+ <body>
+   <div>
+     <h1 class="half">Half-width of parent element.</h1>
+     <h1 class="quarter">Quarter-width of parent element.</h1>
+   </div>
+   <div id="halfWidthContainer">
+     <h1 class="half">Half-width of parent element.</h1>
+     <h1 class="quarter">Quarter-width of parent element.</h1>
+   </div>
+ </body>
+</html>
+
+```
+
+```
+body * {
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+#halfWidthContainer {
+  width: 50%
+}
+
+.half {
+  width: 50%;
+}
+
+.quarter {
+  width: 25%;
+}
+```
 
 ![MyImage](images/CSS-Box-Model.png)
