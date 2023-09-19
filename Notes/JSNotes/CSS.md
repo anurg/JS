@@ -168,3 +168,143 @@ body * {
 ```
 
 ![MyImage](images/CSS-Box-Model.png)
+
+### Manipulating the box model
+
+### height and width
+Use the height and width CSS properties to change the height and width of an element’s content area.
+
+### padding
+Use the padding property to create spacing between an element’s content area and border. The padding property applies this spacing in different ways depending on how many values you provide, as illustrated in the example below:
+
+When you specify the length as a percentage, the length is relative to the width of the parent element.
+
+
+
+```
+//HTML
+<html>
+ <head>
+   <title>CSS Padding</title>
+ </head>
+ <body>
+   <div>
+     <span id="padding1">One Value</span>
+     <span id="padding2">Two Values</span>
+     <span id="padding3">Three Values</span>
+     <span id="padding4">Four Values</span>
+   </div>
+ </body>
+</html>
+
+// CSS 
+/* A single value will apply the same 
+padding on all sides of the box */
+#padding1 {
+  padding: 10px;
+}
+
+/* Two values will apply as: 
+		first value - vertical sides
+		second value - horizontal sides */
+#padding2 {
+  padding: 5px 20px;
+}
+
+/* Three values will apply as:  
+		first value: top side
+		second value: horizontal sides
+		third value: bottom side */
+#padding3 {
+  padding: 10px 5px 30px;
+} 
+
+/* Four values will apply as: 
+		first value: top
+		second value: right
+		third value: bottom
+		fourth value: left
+*/
+#padding4 {
+  padding: 10px 5px 60px 35px;
+}
+
+div {
+  padding: 20px;
+}
+
+span {
+  background-color: plum;
+  border: 5px solid green;
+}
+
+```
+You can also apply padding to a single side of the element using more specific CSS properties. These include padding-bottom, padding-left, padding-right, and padding-top. These properties accept a single value in either relative or absolute units of length:
+```
+/* Apply 10 percent (of parent element's width) worth of padding to the bottom side of paragraph elements */
+
+p {
+    padding-bottom: 10%;
+}
+```
+
+### border
+Like its name implies, the border CSS property sets the border of an element. The syntax for the border property is as follows
+```
+border: width style color;
+```
+
+The width can be given in absolute or relative units. The style can include things like none, dotted, groove, double, and solid, ridge, inset, outset. 
+```
+//HTML
+<html>
+ <head>
+   <title>Creating borders with CSS</title>
+ </head>
+ <body>
+   <p id="border1">Purple dotted border</p>
+   <p id="border2">Green double border</p>
+   <p id="border3">Yellow solid border</p>
+   <p id="border4">Teal grooved border</p>
+ </body>
+</html>
+//CSS 
+#border1 {
+  border: 10px dotted purple;
+}
+
+#border2 {
+  border: 10px double green;
+}
+
+#border3 {
+  border: 10px solid yellow;
+}
+
+#border4 {
+  border: 10px groove teal;
+}
+```
+
+The border property can be expanded into more finely tuned properties such as border-style, border-color, and border-width. These properties can be further expanded to target a specific side, e.g. border-top-width, border-left-style, and so on.
+
+The simple border property is considered shorthand for the more detailed properties. 
+
+```
+border-width: as each of the properties of the shorthand:
+        border-top-width: medium
+        border-right-width: medium
+        border-bottom-width: medium
+        border-left-width: medium
+border-style: as each of the properties of the shorthand:
+        border-top-style: none
+        border-right-style: none
+        border-bottom-style: none
+        border-left-style: none
+border-color: as each of the properties of the shorthand:
+        border-top-color: currentcolor
+        border-right-color: currentcolor
+        border-bottom-color: currentcolor
+        border-left-color: currentcolor
+```
+
