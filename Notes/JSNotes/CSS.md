@@ -428,3 +428,203 @@ h1 {
   margin-right: 25%;
 }
 ```
+### margin, padding, border rules
+When one value is specified, it applies the same margin to all four sides.
+When two values are specified, the first margin applies to the top and bottom, the second to the left and right.
+When three values are specified, the first margin applies to the top, the second to the right and left, the third to the bottom.
+When four values are specified, the margins apply to the top, right, bottom, and left in that order (clockwise).
+
+### Colors
+
+### rgb and rgba values 
+rgb values refer to using red, green, and blue parameters to define a color. You can specify a color by indicating the intensity of each color attribute from a range of 0 to 255. Click on the sliders below to see the range of colors you can specify using RGB values:
+rgb(0,0,0) is black, rgb(255,255,255) is white
+```
+div {
+  border: 4px solid rgb(255, 100, 100);
+  border-radius: 10px;
+}
+```
+rgba values are very similar to rgb values, except they have an additional alpha property that specifies the opacity of the color. The alpha property has a range of 0 to 1, with 0 being fully transparent and 1 being fully opaque. 
+
+```
+background-color: rgba(232, 21, 178, 0.3);
+```
+### Hex values
+Hex values are specified using a color code that consists of a # followed by six hexadecimal digits. The color black would be specified using the code #000000 and white would be specified using the code #FFFFFF.
+
+### What are hexadecimal digits? 
+Hexadecimal refers to using base 16 as a numbering system. What exactly does this mean?
+
+The most common numbering system uses base of ten. This means that for each digit, there are ten possible values:
+
+with one digit, ten possible values can be represented (0-9)
+with two digits, one hundred (ten times ten) possible values can be represented (0-99)
+In a hexadecimal system, one digit represents sixteen possible values. Hexadecimal notation represents the first ten digits using 0-9, and the remaining six using A-F.
+
+Since each hexadecimal digit can represent 16 possible values, two digits can represent 16 * 16 for a total of 256 values.
+
+### Using hexadecimal color values 
+
+In the hexadecimal color code, the first two digits represent red, the third and fourth represent green, and the final two represent blue. This matches up exactly with rgb values as there are 256 possible values for each color (0-255):
+```
+#305575
+```
+
+### hsl and hsla values 
+hsl values are represented by three different parameters: hue, saturation, and lightness.
+
+Hue values are given in terms of an angle from 0 to 360 degrees. The numbers should be written without units.
+
+Saturation and lightness are both given as percentages from 0% to 100%.
+
+Additionally, if you want to define an opacity for the color, an additional alpha attribute can be added using the hsla value.
+
+```
+hsla(180,50%,50%,1)
+```
+
+### Font Styling + Webfonts
+Using Typefaces in CSS and Loading New Typefaces into the Browser
+
+There are many CSS properties we can use on text-based elements to give the text different stylizations.
+
+### Changing font styles 
+You can change the font of your text using the font-family property.
+```
+.Arial {
+  font-family: Arial;
+}
+
+.TimesNewRoman {
+  font-family: "Times New Roman"; 
+}
+
+.Verdana {
+  font-family: Verdana;
+}
+```
+If a font name contains spaces, then it must be wrapped in quotation marks (e.g. "Times New Roman") in order to be rendered properly.
+
+### Web safe fonts 
+When a browser loads a web page, it will apply the font specified in font-family only if the font is loaded on the system.
+
+What do we mean by this? Running the same web page on a Windows desktop, an Android mobile device, or a Mac OS X laptop may yield different results because each platform has a different set of fonts loaded by default.
+
+One way around this is to use web-safe fonts. Web-safe fonts are a set of fonts which are consistent across platforms, meaning you can expect to achieve the same result no matter what device your user is on.
+
+Common fonts that are safe across most platforms include:
+```
+Arial
+Times/Times New Roman
+Helvetica
+Courier New/Courier
+Verdana
+Georgia
+```
+### Font stacking 
+Say we want to use a font that isn’t available on every system. The font-family property accepts multiple font names, separated by commas.
+```
+p {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+```
+This list of fonts is referred to as a font stack. CSS will apply fonts by priority in the font stack. If the first font is not available, it will drop down to the next font in the stack until it finds one it can apply.
+
+It is best practice to specify fonts from the one you most desire to a generic one supported by all systems. In the example above, the last font listed is referred to as a generic-family font.
+
+```
+.serif {
+  font-family: serif;
+}
+
+.sans-serif {
+  font-family: sans-serif;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.cursive {
+  font-family: cursive;
+}
+
+.fantasy {
+  font-family: fantasy;
+}
+```
+You should always end your font-family font stack with a generic-family font so that the browser has a fallback that matches the general style you want your font to be.
+
+### Loading additional fonts 
+If you are not satisfied with being restricted to web-safe fonts, it is indeed possible to load additional fonts when a browser downloads your web page. Google Fonts allows you to load additional fonts by embedding a CSS stylesheet in the <head> element.
+
+```
+<html>
+ <head>
+   <title>Loading Additional Fonts with Google Fonts</title>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+ </head>
+ <body>
+   <h1>Open Sans</h1>
+   <p>Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Director of Ascender Corp. This version contains the complete 897 character set, which includes the standard ISO Latin 1, Latin CE, Greek and Cyrillic character sets. Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.</p>
+ </body>
+</html>
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+```
+Google Fonts provides a broad variety of font styles that are all free. It should be noted that the more fonts you decide to add to your web page, the slower your page will load. Additional fonts should be used judiciously to ensure your user’s experience isn’t compromised.
+
+### Text Alignment + Sizing
+Learn how to manipulate a web page's text in detail.
+
+### Text alignment
+By default, text elements are aligned to the left of their container. Use the text-align property to change the alignment of text within an element. text-align has four different values:
+```
+center: center the text
+left: align the text to the left of its container
+right: align the text to the right of its container
+justify: the text will spread out to fill out the full width of its container
+```
+```
+.centered {
+  text-align: center;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+.rightAlign {
+  text-align: right;
+}
+
+.justify {
+  text-align: justify;
+}
+```
+### Text sizing 
+There will be many instances where you will want to change the default size of text elements. The size of your text can be changed using the font-size property. The font-size takes both absolute and relative values. The most common absolute value is px, and the most common relative values are ems and rems.​
+
+### em and rem units 
+em and rem units are both relative measurement values that work similar to percentages, as they serve as a multiplier in reference to some other unit of measurement.​In the case of font-size:
+
+1 em is equivalent to the font-size of the element’s parent
+1 rem is equivalent to the font-size of the root element of the entire HTML document.
+
+when rem units are used, the reference point is to the root element.
+
+In general, rem units are easier to use since you are making reference to a single value. When you use ems, especially in the case of highly-nested elements, your reference point will vary and may be harder to keep track of.
+
+### Spacing text 
+Use the line-height property to set the height of a line of text.
+
+```
+.small {
+  font-size: 0.5rem;
+  line-height: 5px;
+}
+```
