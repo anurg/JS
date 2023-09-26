@@ -288,3 +288,141 @@ Syntax:
 </body>
 </html>
 ```
+
+### Class 26/09/2023
+### My Notes
+Every Page width can be 1200px or 12fr. pixels (px) is not responsive but fraction(fr) is responsive.
+e.g. if we divide page in 5 fractions, each fraction will be 12/5 = 2.4 fr
+
+<'aside'> tag is used if the content like links or advertisement (not related to current page).
+
+### Class Notes
+
+Header
+Section
+Main
+Nav
+Article
+Div
+Span
+
+ ### Footer
+- Footer comprises of information displayed at bottom margin of page.
+- Typically footer contains information about services, copyrights, address etc.
+- Content in footer is used for SEO.
+```
+Syntax:
+    <footer>
+        ... your content...
+    </footer>
+```
+### FAQ: How to keep content exactly center screen?
+Ans:
+    1. Make sure that all the content that you want to keep in center is inside one
+        container.
+                       
+                        <main>
+                        <div>Title</div>
+                        <div>Sub Title</div>
+                        </main>
+   
+    2. Set following attributes for parent container, that holds the single fragment in
+        page.
+                        <section>
+                            <main>
+                            <div> Title </div>
+                            <div> Sub Title </div>
+                           </main>
+                        </section>
+
+        section {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+         }
+
+
+### CSS Box & Text Shadow
+
+
+    box-shadow : horizontalPixles, verticalPixels, blurPixels, color;
+    text-shadow : horizontalPixles, verticalPixels, blurPixels, color;
+```
+Syntax:
+    .title {
+        text-shadow : 5px 4px 2px black;
+    }
+```
+### Example: ex_centering.html
+```
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title {
+            font-size: 100px;
+            font-weight: bold;
+            text-shadow: 5px 5px 5px yellow;
+        }
+        .sub-title {
+            font-size: 25px;
+            font-style: italic;
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: rgba(0,0,0,0.7);
+        }
+        main {
+            color:white;
+        }
+    </style>
+</head>
+<body background="public/images/banner.jpg">
+    <section>
+            <main>
+            <div class="title">Fashion Store</div>
+            <div class="sub-title">Men's Fashion | Kid's Fashion | Women's Fashion</div>
+            </main>
+    </section>
+</body>
+</html>
+```
+### CSS Grid Display:
+- CSS Grid comprises of content arranged into fixed set of rows and columns.
+- CSS Flex don't have fixed set of rows, it changes according to device width.
+- Every page can split into 12 fractions for grid.
+- You can define columns in fractions or in pixels [1200px].
+```
+Syntax:
+    .container {
+        display:grid;
+        grid-template-columns: 6fr 6fr;    (or) 600px  600px
+    }
+```
+
+### Aside
+- Aside refers to content that is not relative to current context.
+- It comprises of information that can take user aside from current location.
+- Typically ads and social links are defined in aside.
+```
+Syntax:
+    <aside>
+        ... your content...
+    </aside>
+
+```
+
+
+```
+Example for Grid
+```
+
