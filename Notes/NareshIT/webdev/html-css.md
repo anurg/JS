@@ -421,8 +421,302 @@ Syntax:
 
 ```
 
+![Shopping Site Footer](public/images/shopping_site_footer.png)
+```
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <title>Shopper Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <style>
+            header {
+                display: flex;
+                justify-content: space-between;
+                font-size: 20px;
+                font-family: Arial;
+                padding: 25px;
+            }
+            header span {
+                margin-right: 25px;
+            }
+            .brand-title {
+                font-size: 30px;
+                font-weight: bold;
+            }
+            article {
+                background-color: black;
+                color:white;
+                text-align: center;
+                padding: 15px;
+                font-size: 20px;
+                font-family: Arial;
+            }
+            .bi-lightning-fill {
+                color:gold;
+            }
+            nav span:hover {
+                color:blue;
+                cursor: grab;
+                font-weight: bold;
+            }
+            section {
+                height: 500px;
+            }
+            footer {
+                background-color: black;
+                color:white;
+                padding: 10px;
+            }
+            .subscribe {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 200px;
+                text-align: center;
+            }
+            .subscribe-title {
+                font-family: Arial;
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 40px;
+            }
+            .email {
+                display: inline-block;
+                padding: 20px;
+                width: 300px;
+                font-size: 18px;
+                border:1px solid white;
+                text-align: left;
+                background-color: gray;
+            }
+            .btn-subscribe {
+                display: inline-block;
+                padding: 20px;
+                width: 100px;
+                font-size: 18px;
+                border:1px solid white;
+                text-align: left;
+                background-color: grey;
+                font-weight: bold;
+            }
+            .footer {
+                margin-top: 50px;
+                display: grid;
+                grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+                font-family: Arial;
+            }
+            .footer-title {
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            .footer-title~span {
+                display: block;
+                margin-bottom: 15px;
+            }
+            .footer-brand {
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            aside span {
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div>
+                <span class="brand-title">Shopper.</span>
+            </div>
+            <div>
+                <nav>
+                    <span>Home</span>
+                    <span>Catalog</span>
+                    <span>Shop</span>
+                    <span>Blog</span>
+                    <span>Pages</span>
+                    <span>Docs</span>
+                </nav>
+            </div>
+            <div>
+               <nav>
+                <span class="bi bi-search"></span>
+                <span class="bi bi-person"></span>
+                <span class="bi bi-heart"></span>
+                <span class="bi bi-cart4"></span>
+               </nav>
+            </div>
+        </header>
+        <article>
+            <span class="bi bi-lightning-fill"></span>
+            <span> HAPPY HOLIDAY DEALS ON EVERYTHING </span>
+            <span class="bi bi-lightning-fill"></span>
+        </article>
+        <section>
+
+        </section>
+        <footer>
+            <div class="subscribe">
+                <div>
+                    <div class="subscribe-title">Want style Ideas and Treats?</div>
+                    <div>
+                        <span class="email">Enter Email*</span>
+                        <span class="btn-subscribe">Subscribe</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div>
+                    <div class="footer-brand">Shopper.</div>
+                    <aside>
+                        <span class="bi bi-facebook"></span>
+                        <span class="bi bi-twitter"></span>
+                        <span class="bi bi-instagram"></span>
+                        <span class="bi bi-linkedin"></span>
+                    </aside>
+                </div>
+                <div>
+                    <div class="footer-title">SUPPORT</div>
+                    <span>Contact Us</span>
+                    <span>FAQs</span>
+                    <span>Size Guide</span>
+                    <span>Shipping & Returns</span>
+                </div>
+                <div>
+                    <div class="footer-title">SHOP</div>
+                    <span>Men's Shopping</span>
+                    <span>Women's Shopping</span>
+                    <span>Kids' Shopping</span>
+                    <span>Discounts</span>
+                </div>
+                <div>
+                    <div class="footer-title">COMPANY</div>
+                    <span>Our Story</span>
+                    <span>Careers</span>
+                    <span>Terms & Conditions</span>
+                    <span>Privacy & Cookie policy</span>
+                </div>
+                <div>
+                    <div class="footer-title">CONTACT</div>
+                    <span>1-202-555-0105</span>
+                    <span>1-202-555-0106</span>
+                    <span>help@shopper.com</span>
+                </div>
+            </div>
+        </footer>
+    </body>    
+</html>
+```
+![Flipkart footer](public/images/flipkart_footer.jpg)
+### Example: Flipkart Footer Layout
 
 ```
-Example for Grid
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        footer {
+            padding: 10px;
+            background-color: black;
+            color:white;
+            font-size: 20px;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            height: 300px;  
+        }
+        .panel-left {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        .panel-right {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            border-left: 1px solid white;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="panel-left">
+            <div>
+                col-1
+            </div>
+            <div>
+                col-2
+            </div>
+            <div>
+                col-3
+            </div>
+            <div>
+                col-4
+            </div>
+        </div>
+        <div class="panel-right">
+            <div>
+                col-1
+            </div>
+            <div>
+                col-2
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
 ```
+![Instagram Footer](public/images/Instagram-footer.jpg)
+Example: Instagram footer
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 15px;
+            font-family: Arial;
+        }
+        footer span {
+            margin-right: 20px;
+        }
+        footer div {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <div>
+            <span>Meta</span>
+            <span>About</span>
+            <span>            Blog</span>
+            <span>Jobs</span>
+            <span>Help</span>
+            <span>API</span>
+            <span>Privacy</span>
+            <span>Terms</span>
+            <span>Locations</span>
+            <span>Instagram Lite</span>
+            <span>Threads</span>
+            <span>Contact Uploading & Non-Users</span>
+            <span>Meta Verified</span>
+        </div>
+        <div>
+            <span>English</span>
+            <span> &copy; 2023 Instagram from Meta</span>
+        </div>
 
+    </footer>
+</body>
+</html>
+```

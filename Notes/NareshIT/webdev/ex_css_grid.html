@@ -3,7 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
     <title>CSS Grid Example</title>
+    <style>
+      .subscribe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        text-align: center;
+      }
+      .subscribe-title {
+        /* color: white; */
+        font-size: 50px;
+        font-family: Arial;
+        font-weight: bold;
+        margin-bottom: 40px;
+      }
+      .email {
+        display: inline-block;
+        width: 300px;
+        padding: 20px;
+        font-size: 18px;
+        border: 1px solid black;
+        text-align: left;
+        background-color: gray;
+      }
+      .btn-subscribe {
+        display: inline-block;
+        padding: 20px;
+        width: 100px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 1px solid gray;
+        text-align: left;
+        background-color: gray;
+      }
+      /* body {
+        background-color: black;
+      } */
+      .footer {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+        font-family: Arial;
+      }
+      .footer-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .footer-title ~ span {
+        display: block;
+        margin-bottom: 10px;
+      }
+      .footer-brand {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      aside span {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <footer>
+      <div class="subscribe">
+        <div>
+          <div class="subscribe-title">Want Style Ideas and Treats?</div>
+          <div>
+            <span class="email">Enter Email*</span>
+            <span class="btn-subscribe">Subscribe</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div>
+          <div class="footer-brand">Shopper</div>
+          <aside>
+            <span class="bi bi-facebook"></span>
+            <span class="bi bi-youtube"></span>
+            <span class="bi bi-twitter"></span>
+            <span class="bi-instagram"></span>
+            <span class="bi bi-medium"></span>
+          </aside>
+        </div>
+        <div>
+          <div class="footer-title">SUPPORT</div>
+          <span>Contact Us</span>
+          <span>FAQs</span>
+          <span>Size guide</span>
+          <span>Shipping & Returns</span>
+        </div>
+        <div>
+          <div class="footer-title">SHOP</div>
+          <span> Men's Shopping</span>
+          <span>Women's Shopping</span>
+          <span>Kids' Shopping</span>
+          <span>Discounts</span>
+        </div>
+        <div>
+          <div class="footer-title">COMPANY</div>
+          <span>Our Story</span>
+          <span>Careers</span>
+          <span>Terms & Conditions</span>
+          <span>Privacy & Cookie policy</span>
+        </div>
+        <div>
+          <div class="footer-title">CONTACT</div>
+          <span>1-202-555-0105</span>
+          <span>1-202-555-0106</span>
+          <span>help@shopper.com</span>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
