@@ -1,13 +1,12 @@
 ### Web dev Notes from Sudhakar Sharma - NareshIT
 
-
-
-
 25th September 2023
+
 ### Nav
 
 - It defines navigation area in webpage.
 - Typically elements in Nav area are used to navigate from one location to another with in the page or outside side.
+
 ```
 Syntax:
     <nav>
@@ -16,22 +15,25 @@ Syntax:
 ```
 
 ### Creating Responsive Navbar:
+
 - A responsive navbar can change its orientation according device width.
-- You can control the page orientation by using "CSS"  media queries.
+- You can control the page orientation by using "CSS" media queries.
+
 ```
 Syntax:
     @media  type  and (orientation:landscape|portrait) {
 
     }
-   
+
     type = screen, print, speech
 ```
 
-
 ### CSS Flex:
+
 - The default flex direction is "row".
 - You can change the flex direction to "column".
 - Direction is mostly controlled using "@media" query.
+
 ```
 Syntax:
     nav {
@@ -41,8 +43,9 @@ Syntax:
 ```
 
 ### CSS Hover:
+
 - Hover is a class of CSS that defines effects for element when mouse pointer is over - the element.
-- Any CSS class can be configured for element by using ":"  which is inheritance operator.
+- Any CSS class can be configured for element by using ":" which is inheritance operator.
 
 ```
 Syntax:
@@ -54,7 +57,9 @@ Syntax:
 
     }
 ```
+
 ### Example
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -111,14 +116,18 @@ Syntax:
 </body>
 </html>
 ```
+
 Summary
+
 - Header
 - Article
 - Nav
 
 ### Section
+
 - It defines the area between header and footer.
 - Section comprises of body content, which includes all document elements and semantics displayed in workspace.
+
 ```
 Syntax:
    <section>
@@ -126,8 +135,8 @@ Syntax:
   </section>
 ```
 
+### Main
 
- ### Main
 - In computer programming and designing "main" refers to "entry point".
 - Every website provides an entry point for new user.
 - A website can have multiple entiry points.
@@ -143,6 +152,7 @@ Syntax:
 ```
 
 ### CSS Transparent Color:
+
 - You can set transparent color in css by using "rgba()" method.
 - It uses "red, green, blue & alpha values".
 
@@ -154,8 +164,8 @@ Syntax:
       rgba(0,255,0, 0.5)        => transparent green
       rgba(0,0,0,0.5)        => transparent black
 
-
 ### Ex: Netflix
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -290,7 +300,9 @@ Syntax:
 ```
 
 ### Class 26/09/2023
+
 ### My Notes
+
 Every Page width can be 1200px or 12fr. pixels (px) is not responsive but fraction(fr) is responsive.
 e.g. if we divide page in 5 fractions, each fraction will be 12/5 = 2.4 fr
 
@@ -306,26 +318,29 @@ Article
 Div
 Span
 
- ### Footer
+### Footer
+
 - Footer comprises of information displayed at bottom margin of page.
 - Typically footer contains information about services, copyrights, address etc.
 - Content in footer is used for SEO.
+
 ```
 Syntax:
     <footer>
         ... your content...
     </footer>
 ```
+
 ### FAQ: How to keep content exactly center screen?
-Ans:
-    1. Make sure that all the content that you want to keep in center is inside one
-        container.
-                       
+
+Ans: 1. Make sure that all the content that you want to keep in center is inside one
+container.
+
                         <main>
                         <div>Title</div>
                         <div>Sub Title</div>
                         </main>
-   
+
     2. Set following attributes for parent container, that holds the single fragment in
         page.
                         <section>
@@ -342,19 +357,20 @@ Ans:
             height:100vh;
          }
 
-
 ### CSS Box & Text Shadow
-
 
     box-shadow : horizontalPixles, verticalPixels, blurPixels, color;
     text-shadow : horizontalPixles, verticalPixels, blurPixels, color;
+
 ```
 Syntax:
     .title {
         text-shadow : 5px 4px 2px black;
     }
 ```
+
 ### Example: ex_centering.html
+
 ```
 Ex:
 <!DOCTYPE html>
@@ -396,11 +412,14 @@ Ex:
 </body>
 </html>
 ```
+
 ### CSS Grid Display:
+
 - CSS Grid comprises of content arranged into fixed set of rows and columns.
 - CSS Flex don't have fixed set of rows, it changes according to device width.
 - Every page can split into 12 fractions for grid.
 - You can define columns in fractions or in pixels [1200px].
+
 ```
 Syntax:
     .container {
@@ -410,9 +429,11 @@ Syntax:
 ```
 
 ### Aside
+
 - Aside refers to content that is not relative to current context.
 - It comprises of information that can take user aside from current location.
 - Typically ads and social links are defined in aside.
+
 ```
 Syntax:
     <aside>
@@ -422,6 +443,7 @@ Syntax:
 ```
 
 ![Shopping Site Footer](public/images/shopping_site_footer.png)
+
 ```
 <!DOCTYPE html>
 <html lang="en-in">
@@ -607,10 +629,12 @@ Syntax:
                 </div>
             </div>
         </footer>
-    </body>    
+    </body>
 </html>
 ```
+
 ![Flipkart footer](public/images/flipkart_footer.jpg)
+
 ### Example: Flipkart Footer Layout
 
 ```
@@ -628,7 +652,7 @@ Syntax:
             font-size: 20px;
             display: grid;
             grid-template-columns: 6fr 6fr;
-            height: 300px;  
+            height: 300px;
         }
         .panel-left {
             display: grid;
@@ -670,8 +694,10 @@ Syntax:
 </body>
 </html>
 ```
+
 ![Instagram Footer](public/images/Instagram-footer.jpg)
 Example: Instagram footer
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -719,4 +745,105 @@ Example: Instagram footer
     </footer>
 </body>
 </html>
+```
+
+### Class 29/03/2023
+
+### Text Formatting in HTML
+
+```
+<font>
+<b> <strong>
+<i> <em>
+<strike> <del>
+<u> <ins>
+<sup>
+<sub>
+```
+
+### Example : Text Formatting
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    The font style <b><strike><u>Bold</u></strike></b> is similar to <strong><del><ins>Strong</ins></del></strong>.
+    <br>
+    The font style <i>italics</i> is similar to <em>emphasized</em>.
+    <br>
+    5<sup>th</sup>
+    <br>
+    H<sub>2</sub>O
+</body>
+</html>
+```
+
+### Data List with Terms and Definitions
+
+                    ------------------------------------------------
+
+- Data list is defined with <dl>
+- Terms are defined with <dt>
+- Definitions with <dd>
+
+```
+Syntax:
+    <dl>
+        <dt> Term-1 </dt>
+        <dd> Definition </dd>
+    </dl>
+```
+
+```
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link>
+    <style>
+       dt {
+          background-color: lightgray;
+          padding: 4px;
+          width: 400px;
+          font-weight: bold;
+          margin-bottom: 5px;
+       }
+    </style>
+
+</head>
+<body>
+     <dl>
+        <dt>HTML</dt>
+        <dd>It is a markup language. </dd>
+        <dd>It is used for presentation.</dd>
+        <dt>CSS</dt>
+        <dt>Styles</dt>
+        <dd>It defines styles.</dd>
+        <dt>JavaScript</dt>
+        <dd>It manipulates DOM.</dd>
+     </dl>
+</body>
+</html>
+```
+
+### Data list is designed for columns, you can split the terms and definitions into columns by using "display:grid".
+
+```
+Syntax:
+    dl {
+        display:grid;
+        grid-template-columns: 3fr 9fr;
+     }
+```
+
+```
+
 ```
