@@ -845,5 +845,275 @@ Syntax:
 ```
 
 ```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link>
+    <style>
+       dt {
+          background-color: lightgray;
+          padding: 4px;
+          font-weight: bold;
+          margin-bottom: 5px;
+       }
+       dl {
+          display: grid;
+          grid-template-columns: 3fr 9fr;
+       }
+       dd {
+         background-color: black;
+         color:white;
+         padding: 5px;
+         margin-bottom: 5px;
+       }
+    </style>
 
+</head>
+<body>
+     <dl>
+        <dt>First Name</dt>
+        <dd>some name</dd>
+        <dt>Last Name</dt>
+        <dd>some name</dd>
+        <dt>Age</dt>
+        <dd>22</dd>
+        <dt>Email</dt>
+        <dd>some email</dd>
+    </dl>
+</body>
+</html>
+
+```
+
+### CSS Sticky Position:
+
+- It keeps element exactly according to the normal flow of document.
+- It can stick the element to page and lock scrolling after reaching specified point.
+
+```
+syntax:
+    dt {
+        position:sticky;
+        top:0px;
+    }
+```
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link>
+    <style>
+        dt {
+            font-weight: bold;
+            padding: 4px;
+            background-color: black;
+            color:white;
+            width: 200px;
+        }
+        dd {
+            background-color: lightgray;
+            margin-bottom: 4px;
+            margin-top: 4px;
+            width: 100px;
+            padding: 4px;
+        }
+        dt {
+            position: sticky;
+            top: 0px;
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <dl>
+            <h3>Shopper.</h3>
+            <dt>Home</dt>
+            <dd>Electronics</dd>
+            <dd>Footwear</dd>
+            <dd>Fashion</dd>
+            <dt>Electronics</dt>
+            <dd>Televisions</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Televisions</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Televisions</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Televisions</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Televisions</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dt>Footwear</dt>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dt>Fashion</dt>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+        </dl>
+    </nav>
+</body>
+</html>
+```
+
+### Details & Summary
+
+- Details is container with summary as caption.
+- You can show or hide contents dynamically using details & summary.
+
+```
+Syntax:
+    <details>
+        <summary> Caption </summary>
+        .... your content...
+    </details>
+```
+
+### Example 1
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        details div {
+            margin-left: 50px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            color:blue;
+        }
+        summary {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <details open>
+        <summary>Need Help?</summary>
+        <div>Forgot Password</div>
+        <div>Other issues with sign-in</div>
+    </details>
+</body>
+</html>
+```
+
+### Example 2
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        details div {
+            margin-left: 50px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            color:blue;
+            background-color: lightgray;
+            padding: 4px;
+            width: 120px;
+        }
+        summary {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <details open>
+       <summary>Home</summary>
+       <div>Electronics</div>
+       <div>Footwear</div>
+       <div>Fashion</div>
+    </details>
+    <details>
+        <summary>Electronics</summary>
+        <div>Televisions</div>
+        <div>Mobiles</div>
+        <div>Watches</div>
+    </details>
+    <details>
+        <summary>Footwear</summary>
+        <div>Casuals</div>
+        <div>Sneakers</div>
+        <div>Boots</div>
+    </details>
+</body>
+</html>
+```
+
+### Fieldset & Legend
+
+- Fieldset is a container used to display a category or group of contents in page.
+- Legend defines the container title.
+
+```
+Syntax:
+    <fieldset>
+        <legend> Title </legend>
+        .... your content...
+    </fieldset>
 ```
