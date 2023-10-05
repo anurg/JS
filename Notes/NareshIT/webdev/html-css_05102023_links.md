@@ -19,4 +19,32 @@ Syntax:
     <a href="#mobile"> Text | Image </a>
 ```
 
+FAQ: What is difference between  "src" & "href" ?
+Ans:  src is a getter
+      href is a setter
+
+FAQ: How to remove underline for hyperlink?
+Ans:  By removing the CSS attribute "text-decoration".
+```
+Syntax:
+    a {
+      text-decoration:none;
+    }
+```
+
+
+FAQ: How to change color for active and visited links?
+Ans:  
+```
+    a) By using HTML <body> attributes :   alink , vlink
+
+            <body  alink="red" vlink="gray">
+   
+    b) By using CSS classes
+
+            a:visited {            a:active {        => when user hold down mouse btn
+
+            }                }
+
+```
 
