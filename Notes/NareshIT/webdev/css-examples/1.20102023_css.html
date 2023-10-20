@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css" media="screen">
+      img {
+        border-radius: 100px;
+      }
+      .gift {
+        border: 4px double red;
+        padding: 50px;
+        width: 600px;
+        margin: auto;
+        text-align: center;
+        background-color: lightgoldenrodyellow;
+      }
+    </style>
+    <style type="text/css" media="print">
+      img {
+        border-radius: 100px;
+      }
+      .gift {
+        border: 1px solid black;
+        padding: 10px;
+        width: 40%;
+        text-align: left;
+      }
+      img,
+      button {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gift">
+      <img src="../public/images/a1.jpg" width="100px" height="100px" />
+      <h2>Gift Card</h2>
+      <div>50% Off - Code: AMZ406789Y</div>
+      <button onclick="window.print()">Print</button>
+    </div>
+  </body>
+</html>
