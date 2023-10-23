@@ -11,25 +11,34 @@
       }
       .el--2 {
         background-color: orangered;
+        /* grid-column: 1 / span 2; */
+        /* grid-column: 2 / -1; */
+        /* grid-row: 2 / 3; */
       }
       .el--3 {
         background-color: green;
-        height: 150px;
+        /* height: 150px; */
       }
       .el--4 {
         background-color: goldenrod;
+        /* height: 200pxs; */
       }
       .el--5 {
         background-color: palevioletred;
       }
       .el--6 {
         background-color: steelblue;
+        /* grid-row: 3 / 6; */
       }
       .el--7 {
         background-color: yellow;
+        align-self: stretch;
+        justify-self: stretch;
       }
       .el--8 {
         background-color: crimson;
+        /* grid-column: 2;
+        grid-row: 1 / span 3; */
       }
 
       .container--1 {
@@ -41,16 +50,19 @@
 
         /* CSS GRID */
         display: grid;
-        grid-template-columns: 300px 200px 200px 300px;
-        grid-template-rows: 300px 200px;
+        /* grid-template-columns: 2fr 1fr 1fr auto; */
+        grid-template-columns: repeat(4, 1fr);
+        /* height: 320px; */
+        grid-template-rows: 1fr 1fr;
         /* gap: 20px; */
         column-gap: 20px;
-        row-gap: 140px;
+        row-gap: 40px;
+        display: none;
       }
 
       .container--2 {
         /* STARTER */
-        display: none;
+        /* display: none; */
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
@@ -60,6 +72,14 @@
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+        align-content: center;
+        justify-content: center;
+        align-items: start;
+        justify-items: start;
+        gap: 30px;
       }
     </style>
   </head>
