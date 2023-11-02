@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .banner {
+        overflow: hidden;
+      }
+      .slide1 {
+        transform: translateX(1300px);
+        transition: 3s;
+      }
+      .banner:hover .slide1 {
+        transform: translateX(0px);
+        transition: 3s;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="banner">
+      <img class="slide1" src="../public/images/slide1.png" width="100%" />
+    </div>
+  </body>
+</html>
