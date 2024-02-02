@@ -16,8 +16,25 @@
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
-    <script type="text/babel">
-      ReactDOM.render("Welcome to React 17x", document.getElementById("root"));
+    <style>
+      .container {
+        width: 400px;
+        border: 1px solid gray;
+        padding: 20px;
+        box-shadow: 2px 2px 2px black;
+      }
+    </style>
+    <script type="text/jsx">
+      function SearchBar() {
+        return (
+          <div align="center" className="container">
+            <input type="text" placeholder="Enter Search Text" />
+            <button>Search</button>
+          </div>
+        );
+      }
+      ReactDOM.render(<div> <SearchBar></SearchBar> <br /> <SearchBar /> </div>, document.getElementById("root"));
+      // ReactDOM.render("Welcome to React 17x", document.getElementById("root"));
     </script>
   </head>
   <body>
