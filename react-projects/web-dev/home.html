@@ -18,10 +18,12 @@
     <script type="text/babel">
       function SearchBar() {
         return (
-          <div align="center" className="container">
-            <input type="text" placeholder="Search Amazon.in" />
-            <button>Search</button>
-          </div>
+          <React.Fragment>
+            <div align="center" className="container">
+              <input type="text" placeholder="Search Amazon.in" />
+              <button>Search</button>
+            </div>
+          </React.Fragment>
         );
       }
       ReactDOM.render(<SearchBar></SearchBar>, document.getElementById("root"));
