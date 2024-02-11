@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+    <script>
+      var categories = ["All", "Footwear", "Mobiles", "Electronics"];
+      function bodyload() {
+        categories.map((category) => {
+          var option = document.createElement("option");
+          option.text = category;
+          option.value = category;
+          document.querySelector("select").appendChild(option);
+        });
+      }
+    </script>
+  </head>
+  <body onload="bodyload()">
+    <select></select>
+  </body>
+</html>
