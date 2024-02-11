@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/@babel/standalone/babel.min.js"
-    ></script>
+    <style>
+      .container {
+        width: 400px;
+        border: 1px solid gray;
+        padding: 20px;
+        box-shadow: 2px 2px 2px black;
+      }
+    </style>
+    <script src="./node_modules/react/umd/react.development.js"></script>
+    <script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="./node_modules/@babel/standalone/babel.js"></script>
     <script type="text/babel">
-      ReactDOM.render("Welcome to React JS!", document.getElementById("root"));
+      function SearchBar() {
+        return (
+          <div align="center" className="container">
+            <input type="text" placeholder="Search Amazon.in" />
+            <button>Search</button>
+          </div>
+        );
+      }
+      ReactDOM.render(<SearchBar></SearchBar>, document.getElementById("root"));
     </script>
   </head>
   <body>
