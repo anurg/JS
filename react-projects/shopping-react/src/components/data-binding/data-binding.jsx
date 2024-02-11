@@ -1,39 +1,32 @@
 export function DataBinding() {
-  var categories = ["All", "Footwear", "Mobiles", "Electronics"];
+  var menu = [
+    { Category: "Electronics", Products: ["TV", "Mobiles"] },
+    { Category: "Footwear", Products: ["Boots", "Sneakers"] },
+  ];
   return (
     <div className="container-fluid">
-      <h2>Data Types</h2>
+      <h2>Data Types:</h2>
       <ol>
-        {categories.map((category) => (
-          <li key={category}>{category}</li>
+        {menu.map((item) => (
+          <li key={item.Category}>
+            {item.Category}
+            <ul>
+              {item.Products.map((product) => (
+                <li key={product}>{product}</li>
+              ))}
+            </ul>
+          </li>
         ))}
       </ol>
       <select>
-        {categories.map((category) => (
-          <option key={category} value={category}>
-            {" "}
-            {category}
-          </option>
+        {menu.map((item) => (
+          <optgroup key={item.Category} label={item.Category}>
+            {item.Products.map((product) => (
+              <option key={product}>{product}</option>
+            ))}
+          </optgroup>
         ))}
       </select>
-      <br />
-      <ul className="list-unstyled">
-        {categories.map((category) => (
-          <li key={category}>
-            {" "}
-            <input type="checkbox" /> <label>{category}</label>{" "}
-          </li>
-        ))}
-      </ul>
-      <br />
-      <nav className="p-2 border d-flex justify-content-between border-1 border-dark">
-        {categories.map((category) => (
-          <a className="btn btn-dark" key={category} href="#">
-            {" "}
-            {category}{" "}
-          </a>
-        ))}
-      </nav>
     </div>
   );
 }

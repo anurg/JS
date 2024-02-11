@@ -6,6 +6,10 @@
     <title>Demo</title>
     <script>
       var categories = ["All", "Footwear", "Mobiles", "Electronics"];
+      var products = [
+        { Name: "TV", Price: 45000 },
+        { Name: "Mobile", Price: 12000 },
+      ];
       function bodyload() {
         categories.map((category) => {
           var option = document.createElement("option");
@@ -14,9 +18,27 @@
           document.querySelector("select").appendChild(option);
         });
       }
+      function bodyload1() {
+        products.map((product) => {
+          var tr = document.createElement("tr");
+          var tdName = document.createElement("td");
+          var tdPrice = document.createElement("td");
+          tdName.innerHTML = product.Name;
+          tdPrice.innerHTML = product.Price;
+          tr.appendChild(tdName);
+          tr.appendChild(tdPrice);
+          document.querySelector("table").appendChild(tr);
+        });
+      }
     </script>
   </head>
-  <body onload="bodyload()">
-    <select></select>
+  <body onload="bodyload1()">
+    <!-- <select></select> -->
+    <table width="100%" border="1px">
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+    </table>
   </body>
 </html>
