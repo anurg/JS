@@ -4,16 +4,20 @@ export function DataBinding() {
  const [product, setProduct] = useState({title:'',rating:{rate:0,ratings:0,reviews:0}, price:0, offers:[], image:''});
 
  function LoadProduct() {
-    const http = new XMLHttpRequest();
-    http.open('get','product.json',true);
-    http.send();
+   fetch("product.json")
+   .then((response)=>{
+    var res =response.json()
+    // console.log(res)
+      return res
+    }).then((product)=>{
+      console.log(product)
+      setProduct(product)
 
-    http.onreadystatechange = function() {
-      if (http.readyState === 4) {
-        setProduct(JSON.parse(http.responseText));
-      }
-    }
-
+          }).catch((e)=>{
+      console.log(e)
+    }).finally(()=>{
+    console.log("Request Completed!")
+   });
 
  }
 
