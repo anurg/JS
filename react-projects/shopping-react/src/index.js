@@ -9,11 +9,12 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import * as bootstrap from "bootstrap";
 import { DataBinding } from "./components/data-binding/data-binding";
+import { NasaAPI } from "./components/nasa-api/nasa-api";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <DataBinding />
+    <NasaAPI />
   </React.StrictMode>
 );
 
