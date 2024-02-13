@@ -1,24 +1,17 @@
+import { error } from "jquery";
 import { useState, useEffect } from "react";
+import $ from "jquery";
+import axios from "axios";
 
 export function DataBinding() {
  const [product, setProduct] = useState({title:'',rating:{rate:0,ratings:0,reviews:0}, price:0, offers:[], image:''});
 
  function LoadProduct() {
-   fetch("product.json")
-   .then((response)=>{
-    var res =response.json()
-    // console.log(res)
-      return res
-    }).then((product)=>{
-      console.log(product)
-      setProduct(product)
-
-          }).catch((e)=>{
-      console.log(e)
-    }).finally(()=>{
-    console.log("Request Completed!")
-   });
-
+   axios.get("product.json").then((response)=>{
+    setProduct(response.data)
+   }).catch((ex)=>{
+     console.log(ex);
+   })
  }
 
  useEffect(()=>{
