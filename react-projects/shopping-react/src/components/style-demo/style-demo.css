@@ -9,3 +9,9 @@
   box-shadow: 2px 2px 2px green;
   outline: none;
 }
+
+.box {
+  border: 5px double red;
+  color: red;
+  padding: 20px;
+}

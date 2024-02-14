@@ -51,38 +51,54 @@ import "./style-demo.css"
 // Style Binding Another example.
 
 
+//  Style Binding & Class Binding Demo
+// export function StyleDemo(){
+
+
+//     const [theme, setTheme] = useState('bg-light text-dark');
+//     const [btnStyle, setBtnStyle] = useState('btn btn-dark w-100');
+
+//     function ThemeChange(e){
+//         if(e.target.checked){
+//             setTheme('bg-dark text-white');
+//             setBtnStyle('btn btn-light w-100');
+//         } else {
+//             setTheme('bg-light text-dark');
+//             setBtnStyle('btn btn-dark w-100');
+//         }
+//     }
+
+//     return(
+//         <div className="container-fluid d-flex justify-content-center align-items-center" style={{height:'100vh'}}>
+//             <form className={theme}>
+//                 <div className="form-switch">
+//                     <input type="checkbox" onChange={ThemeChange} className="form-check-input" /> <label className="form-check-label"> Dark Mode </label>
+//                 </div>
+//                 <h2 className="bi bi-person-fill" style={{fontWeight : 'unset', fontSize : 'unset', display : 'unset'}}>User Login</h2> <span>Hello</span>
+//                 <dl>
+//                     <dt>User Name</dt>
+//                     <dd><input type="text" className="form-control" /></dd>
+//                     <dt>Password</dt>
+//                     <dd><input type="password" className="form-control" /></dd>
+//                 </dl>
+//                 <button className={btnStyle}>Login</button>
+//             </form>
+//         </div>
+//     )
+// }
+
+
+// CSS Inheritence override demo
 
 export function StyleDemo(){
 
-
-    const [theme, setTheme] = useState('bg-light text-dark');
-    const [btnStyle, setBtnStyle] = useState('btn btn-dark w-100');
-
-    function ThemeChange(e){
-        if(e.target.checked){
-            setTheme('bg-dark text-white');
-            setBtnStyle('btn btn-light w-100');
-        } else {
-            setTheme('bg-light text-dark');
-            setBtnStyle('btn btn-dark w-100');
-        }
-    }
-
     return(
         <div className="container-fluid d-flex justify-content-center align-items-center" style={{height:'100vh'}}>
-            <form className={theme}>
-                <div className="form-switch">
-                    <input type="checkbox" onChange={ThemeChange} className="form-check-input" /> <label className="form-check-label"> Dark Mode </label>
-                </div>
-                <h2 className="bi bi-person-fill" style={{fontWeight : 'unset', fontSize : 'unset', display : 'unset'}}>User Login</h2> <span>Hello</span>
-                <dl>
-                    <dt>User Name</dt>
-                    <dd><input type="text" className="form-control" /></dd>
-                    <dt>Password</dt>
-                    <dd><input type="password" className="form-control" /></dd>
-                </dl>
-                <button className={btnStyle}>Login</button>
-            </form>
+            
+            <div className="box">
+            Normal Text:
+                <h1 style={{color : 'black'}}> Welcome to React</h1>
+            </div>
         </div>
     )
 }
