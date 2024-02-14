@@ -47,3 +47,5 @@ export function StyleDemo() {
         </div>
     );
 }
+
+// Style Binding Another example.
