@@ -5,40 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demo</title>
     <script>
-      var categories = ["All", "Footwear", "Mobiles", "Electronics"];
-      var products = [
-        { Name: "TV", Price: 45000 },
-        { Name: "Mobile", Price: 12000 },
-      ];
-      function bodyload() {
-        categories.map((category) => {
-          var option = document.createElement("option");
-          option.text = category;
-          option.value = category;
-          document.querySelector("select").appendChild(option);
-        });
-      }
-      function bodyload1() {
-        products.map((product) => {
-          var tr = document.createElement("tr");
-          var tdName = document.createElement("td");
-          var tdPrice = document.createElement("td");
-          tdName.innerHTML = product.Name;
-          tdPrice.innerHTML = product.Price;
-          tr.appendChild(tdName);
-          tr.appendChild(tdPrice);
-          document.querySelector("table").appendChild(tr);
-        });
+      function InsertClick(obj, e, cities) {
+        document.write(`
+        Button Id : ${obj.id} <br>
+        Button Class : ${obj.className} <br>
+        X Position : ${e.clientX} <br>
+        Ctrl Key : ${e.ctrlKey} <br>
+        Cities : ${cities.join("/")}
+        `);
       }
     </script>
   </head>
-  <body onload="bodyload1()">
-    <!-- <select></select> -->
-    <table width="100%" border="1px">
-      <tr>
-        <th>Name</th>
-        <th>Price</th>
-      </tr>
-    </table>
+  <body onload="bodyload()">
+    <button
+      id="btnInsert"
+      onclick="InsertClick(this,event,['Delhi','Hyd'])"
+      value="Insert"
+      class="btn btn-primary"
+    >
+      Insert
+    </button>
   </body>
 </html>
