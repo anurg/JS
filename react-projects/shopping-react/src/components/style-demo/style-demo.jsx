@@ -74,7 +74,7 @@ export function StyleDemo(){
                 <div className="form-switch">
                     <input type="checkbox" onChange={ThemeChange} className="form-check-input" /> <label className="form-check-label"> Dark Mode </label>
                 </div>
-                <h2 className="bi bi-person-fill">User Login</h2>
+                <h2 className="bi bi-person-fill" style={{fontWeight : 'unset', fontSize : 'unset', display : 'unset'}}>User Login</h2> <span>Hello</span>
                 <dl>
                     <dt>User Name</dt>
                     <dd><input type="text" className="form-control" /></dd>
