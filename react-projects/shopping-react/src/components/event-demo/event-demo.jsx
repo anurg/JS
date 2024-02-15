@@ -164,38 +164,78 @@ import axios from "axios";
 
 //  Password Strength Demo With Bootstrap ProgressBar
 
-export function EventDemo(){
-    const [msg, setMsg] = useState('');
-    const [progressClass,setProgressClass] = useState('');
-    const [progressStyle, setProgressStyle] = useState({width : '0%'})
+// export function EventDemo(){
+//     const [msg, setMsg] = useState('');
+//     const [progressClass,setProgressClass] = useState('');
+//     const [progressStyle, setProgressStyle] = useState({width : '0%'})
 
-    function VerifyPassword(e) {
-        if (e.target.value.match(/(?=.*[A-Z])\w{4,15}/)) {
-                setMsg("Strong Password");
-                setProgressClass('bg-success');
-                setProgressStyle({width : "100%"});
-        } else {
-            if (e.target.value.length<4) {
-                setMsg('Poor Pasword'); 
-                setProgressClass('bg-danger');
-                setProgressStyle({width : "30%"});
-            } else {
-                setMsg('Weak Pasword'); 
-                setProgressClass('bg-warning');
-                setProgressStyle({width : "70%"});
-            }
-        }
+//     function VerifyPassword(e) {
+//         if (e.target.value.match(/(?=.*[A-Z])\w{4,15}/)) {
+//                 setMsg("Strong Password");
+//                 setProgressClass('bg-success');
+//                 setProgressStyle({width : "100%"});
+//         } else {
+//             if (e.target.value.length<4) {
+//                 setMsg('Poor Pasword'); 
+//                 setProgressClass('bg-danger');
+//                 setProgressStyle({width : "30%"});
+//             } else {
+//                 setMsg('Weak Pasword'); 
+//                 setProgressClass('bg-warning');
+//                 setProgressStyle({width : "70%"});
+//             }
+//         }
+//     }
+//     return (
+//         <div className="container-fluid m-2 p-4">
+//             <h2>Register User</h2>
+//             <dl className="w-25">
+//                 <dt>Password</dt>
+//                 <dd><input type="password" onKeyUp={VerifyPassword} className="form-control"/></dd>
+//                    <dd className="progress">
+//                     <div className={`progress-bar progress-bar-striped progress-bar-animated ${progressClass}`} style={progressStyle}>{msg}</div>
+//                    </dd>
+//             </dl>
+//         </div>
+//     );
+// }
+
+// Button Events Demo
+
+// export function EventDemo() {
+//     function handleDoubleClick() {
+//         window.open("logo512.png", "Logo", 'width = 400, height = 400');
+//     }
+//     function handleRightClick() {
+//         alert("Right Click is disabled.");
+//         document.oncontextmenu = function() {
+//             return false;
+//         }
+//     }
+//     return (
+//         <div className="container-fluid m-2 p-4 ">
+//             <img src="logo512.png" onContextMenu={handleRightClick} width="100" height="100" onDoubleClick={handleDoubleClick}/>
+//             <p>Double Click to Open in new Window</p>
+//         </div>
+//     );
+// }
+
+// Clipboard Event Demo
+export function EventDemo() {
+    const [msg, setMsg] = useState('');
+    function handleCopy(e) {
+        setMsg('Copied to Clipboard')
     }
     return (
-        <div className="container-fluid m-2 p-4">
-            <h2>Register User</h2>
-            <dl className="w-25">
-                <dt>Password</dt>
-                <dd><input type="password" onKeyUp={VerifyPassword} className="form-control"/></dd>
-                   <dd className="progress">
-                    <div className={`progress-bar progress-bar-striped progress-bar-animated ${progressClass}`} style={progressStyle}>{msg}</div>
-                   </dd>
-            </dl>
+        <div className="container-fluid m-2 p-4 ">
+           <dl>
+            <dt>Account Number</dt>
+            <dd><input type="text" onCopy={handleCopy} /></dd>
+            <dd>{msg}</dd>
+            <dt>Verify Account</dt>
+            <dd><input type="text" onPaste={()=>{ document.onpaste = ()=>{return false}}}/></dd>
+           </dl>
         </div>
     );
 }
+
