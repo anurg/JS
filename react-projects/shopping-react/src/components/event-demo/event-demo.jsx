@@ -131,32 +131,70 @@ import axios from "axios";
 // }
 
 //  Password Strength Demo
+// export function EventDemo(){
+//     const [msg, setMsg] = useState('');
+//     const [meter, setMeter] = useState(0);
+
+//     function VerifyPassword(e) {
+//         if (e.target.value.match(/(?=.*[A-Z])\w{4,15}/)) {
+//             setMeter(100);
+//             setMsg("Strong Password")
+//         } else {
+//             if (e.target.value.length<4) {
+//                 setMeter(30);
+//                 setMsg('Poor Pasword'); 
+//             } else {
+//                 setMeter(70);
+//                 setMsg('Weak Pasword'); 
+//             }
+//         }
+//     }
+//     return (
+//         <div className="container-fluid m-2 p-4">
+//             <h2>Register User</h2>
+//             <dl>
+//                 <dt>Password</dt>
+//                 <dd><input type="password" onKeyUp={VerifyPassword}/></dd>
+//                 <dd><meter min="1" max="100" value={meter} style={{width : "200px"}}></meter></dd>
+//                 <dd>{msg}</dd>
+//             </dl>
+//         </div>
+//     );
+// }
+
+//  Password Strength Demo With Bootstrap ProgressBar
+
 export function EventDemo(){
     const [msg, setMsg] = useState('');
-    const [meter, setMeter] = useState(0);
+    const [progressClass,setProgressClass] = useState('');
+    const [progressStyle, setProgressStyle] = useState({width : '0%'})
 
     function VerifyPassword(e) {
         if (e.target.value.match(/(?=.*[A-Z])\w{4,15}/)) {
-            setMeter(100);
-            setMsg("Strong Password")
+                setMsg("Strong Password");
+                setProgressClass('bg-success');
+                setProgressStyle({width : "100%"});
         } else {
             if (e.target.value.length<4) {
-                setMeter(30);
                 setMsg('Poor Pasword'); 
+                setProgressClass('bg-danger');
+                setProgressStyle({width : "30%"});
             } else {
-                setMeter(70);
                 setMsg('Weak Pasword'); 
+                setProgressClass('bg-warning');
+                setProgressStyle({width : "70%"});
             }
         }
     }
     return (
         <div className="container-fluid m-2 p-4">
             <h2>Register User</h2>
-            <dl>
+            <dl className="w-25">
                 <dt>Password</dt>
-                <dd><input type="password" onKeyUp={VerifyPassword}/></dd>
-                <dd><meter min="1" max="100" value={meter} style={{width : "200px"}}></meter></dd>
-                <dd>{msg}</dd>
+                <dd><input type="password" onKeyUp={VerifyPassword} className="form-control"/></dd>
+                   <dd className="progress">
+                    <div className={`progress-bar progress-bar-striped progress-bar-animated ${progressClass}`} style={progressStyle}>{msg}</div>
+                   </dd>
             </dl>
         </div>
     );
