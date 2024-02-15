@@ -221,21 +221,45 @@ import axios from "axios";
 // }
 
 // Clipboard Event Demo
+// export function EventDemo() {
+//     const [msg, setMsg] = useState('');
+//     function handleCopy(e) {
+//         setMsg('Copied to Clipboard')
+//     }
+//     return (
+//         <div className="container-fluid m-2 p-4 ">
+//            <dl>
+//             <dt>Account Number</dt>
+//             <dd><input type="text" onCopy={handleCopy} /></dd>
+//             <dd>{msg}</dd>
+//             <dt>Verify Account</dt>
+//             <dd><input type="text" onPaste={()=>{ document.onpaste = ()=>{return false}}}/></dd>
+//            </dl>
+//         </div>
+//     );
+// }
+// Element State Events
 export function EventDemo() {
-    const [msg, setMsg] = useState('');
-    function handleCopy(e) {
-        setMsg('Copied to Clipboard')
+  const [msg, setMsg] = useState('');
+  function handleFocus() {
+    setMsg("Enter Code in Block letters");
+  }
+  function handleBlur(e) {
+    if (e.target.value.length == 0) {
+        setMsg("enter Code");
+    } else {
+        setMsg('');
     }
+  }
     return (
         <div className="container-fluid m-2 p-4 ">
-           <dl>
-            <dt>Account Number</dt>
-            <dd><input type="text" onCopy={handleCopy} /></dd>
-            <dd>{msg}</dd>
-            <dt>Verify Account</dt>
-            <dd><input type="text" onPaste={()=>{ document.onpaste = ()=>{return false}}}/></dd>
-           </dl>
+         <dl>
+            <dt>IFSC Code</dt>
+            <dd><input type="text" onFocus={handleFocus} onBlur={handleBlur} placeholder="Code in Block Letters"/></dd>
+            <dd className="text-danger">
+                {msg}
+            </dd>
+         </dl>
         </div>
     );
 }
-
