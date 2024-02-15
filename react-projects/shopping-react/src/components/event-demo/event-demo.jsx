@@ -1,22 +1,14 @@
 
 export function EventDemo() {
-    function InsertClick(...args) {
-        var [e,msg,no] = args;
-        // document.write(`
-        //     Object Id : ${e.target.id} <br>
-        //     Class Name: ${e.target.className} <br>
-        //     X Position : ${e.clientX} <br>
-        //     `
-        // )
-        document.write( `
-            ${e.target.className} <br>
-        ${msg} <br>
-        ${no}
-        `)
-}
+    function handleSubmit(e) {
+        alert("Later we will post data to API.")
+        e.preventDefault();
+    }
     return (
-        <div className="container-fluid">
-            <button id="btnInsert" onClick={(e)=>InsertClick(e,'Welcome', 10)} className="btn btn-success mt-4">Insert</button>
+        <div className="container-fluid m-2 p-4" >
+           <form className="w-50" noValidate>
+            User Name: <input type="email"  name="UserName"/> <button type="submit">Submit</button>
+           </form>
         </div>
     );
 }
