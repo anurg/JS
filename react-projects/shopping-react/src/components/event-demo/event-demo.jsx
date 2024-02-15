@@ -133,7 +133,7 @@ import axios from "axios";
 //  Password Strength Demo
 export function EventDemo(){
     const [msg, setMsg] = useState('');
-    const [meter, setMeter] = useState('');
+    const [meter, setMeter] = useState(0);
 
     function VerifyPassword(e) {
         if (e.target.value.match(/(?=.*[A-Z])\w{4,15}/)) {
