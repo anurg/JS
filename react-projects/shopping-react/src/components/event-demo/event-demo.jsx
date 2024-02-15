@@ -89,6 +89,7 @@ export function EventDemo(){
     const [users,setUsers] = useState([]);
     const [userError,setUserError] = useState('');
     const [valClass, setValClass] = useState('');
+    const [showWarn, setShowWarn] = useState('d-none');
     useEffect(()=>{
        axios.get("users.json").then((response)=>{
             setUsers(response.data);
@@ -106,6 +107,13 @@ export function EventDemo(){
             }
         }
     }
+    function VerifyCaps(e) {
+        if (e.which >=65 && e.which<=90) {
+            setShowWarn('d-block');
+        } else {
+            setShowWarn('d-none');
+        }
+    }
     return (
         <div className="container-fluid m-2" >
             <h2>Register User</h2>
@@ -113,7 +121,10 @@ export function EventDemo(){
                 <dt>User Id</dt>
                 <dd><input type="text" onKeyUp={VerifyUserId} /></dd>
                 <dd className={valClass}>{userError}</dd>
-
+                <dt>Password</dt>
+                <dd><input type="password" onKeyPress={VerifyCaps}/></dd>
+                <dd className={`text-warning ${showWarn}`}><span className="bi bi-exclamation-triangle-fill text-warning"></span>
+                    Warning- Caps On</dd>
             </dl>
         </div>
      );
