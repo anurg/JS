@@ -14,11 +14,12 @@ import { TwoWayBinding } from "./components/two-way-binding/two-way-binding";
 import { StyleDemo } from "./components/style-demo/style-demo";
 import { EventDemo } from "./components/event-demo/event-demo";
 import { TimerDemo } from "./components/timer-demo/time-demo";
+import { SlideShow } from "./components/slide-show/slide-show";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <TimerDemo />
+    <SlideShow />
   </React.StrictMode>
 );
 
