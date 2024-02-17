@@ -11,7 +11,7 @@
 //     useEffect(()=>{
 //         LoadMobiles();
 //     },[])
-    
+
 //     function handleMouseOver(e) {
 //         setTargetImg(e.target.src);
 //     }
@@ -24,7 +24,7 @@
 //                             <div  key={mobile.img_src}>
 //                                 <img src={mobile.img_src} width="60" height="100" onMouseOver={handleMouseOver} />
 //                             </div>
-                        
+
 //                         )
 //                     }
 //                 </nav>
@@ -32,7 +32,7 @@
 //                     <img width="300" height="400" src={targetImg} />
 //                 </main>
 //            </section>
-//           </div> 
+//           </div>
 //     );
 // }
 
@@ -52,7 +52,7 @@ import axios from "axios";
 //             left: e.clientX + 'px'
 //         })
 //     }
-   
+
 //     return(
 //         <div onMouseMove={GetPosition} className="container-fluid m-2 p-4">
 //             <div style={{height:'1000px'}}>
@@ -93,7 +93,7 @@ import axios from "axios";
 //     useEffect(()=>{
 //        axios.get("users.json").then((response)=>{
 //             setUsers(response.data);
-//        }) 
+//        })
 //     },[])
 //     function VerifyUserId(e) {
 //         for (var user of users) {
@@ -142,10 +142,10 @@ import axios from "axios";
 //         } else {
 //             if (e.target.value.length<4) {
 //                 setMeter(30);
-//                 setMsg('Poor Pasword'); 
+//                 setMsg('Poor Pasword');
 //             } else {
 //                 setMeter(70);
-//                 setMsg('Weak Pasword'); 
+//                 setMsg('Weak Pasword');
 //             }
 //         }
 //     }
@@ -176,11 +176,11 @@ import axios from "axios";
 //                 setProgressStyle({width : "100%"});
 //         } else {
 //             if (e.target.value.length<4) {
-//                 setMsg('Poor Pasword'); 
+//                 setMsg('Poor Pasword');
 //                 setProgressClass('bg-danger');
 //                 setProgressStyle({width : "30%"});
 //             } else {
-//                 setMsg('Weak Pasword'); 
+//                 setMsg('Weak Pasword');
 //                 setProgressClass('bg-warning');
 //                 setProgressStyle({width : "70%"});
 //             }
@@ -240,26 +240,31 @@ import axios from "axios";
 // }
 // Element State Events
 export function EventDemo() {
-  const [msg, setMsg] = useState('');
+  const [msg, setMsg] = useState("");
   function handleFocus() {
     setMsg("Enter Code in Block letters");
   }
   function handleBlur(e) {
     if (e.target.value.length == 0) {
-        setMsg("enter Code");
+      setMsg("enter Code");
     } else {
-        setMsg('');
+      setMsg("");
     }
   }
-    return (
-        <div className="container-fluid m-2 p-4 ">
-         <dl>
-            <dt>IFSC Code</dt>
-            <dd><input type="text" onFocus={handleFocus} onBlur={handleBlur} placeholder="Code in Block Letters"/></dd>
-            <dd className="text-danger">
-                {msg}
-            </dd>
-         </dl>
-        </div>
-    );
+  return (
+    <div className="container-fluid m-2 p-4 ">
+      <dl>
+        <dt>IFSC Code</dt>
+        <dd>
+          <input
+            type="text"
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            placeholder="Code in Block Letters"
+          />
+        </dd>
+        <dd className="text-danger">{msg}</dd>
+      </dl>
+    </div>
+  );
 }
