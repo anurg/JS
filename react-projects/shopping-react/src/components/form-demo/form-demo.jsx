@@ -141,12 +141,44 @@ import * as yup from "yup";
 // }
 
 // formik components Demo
+// export function FormDemo() {
+//     return (
+//         <div className="container-fluid">
+//             <h2>Register User</h2>
+//             <Formik 
+//             initialValues={{CustomerName: '',Phone: ''}}
+//             validationSchema={yup.object({
+//                 CustomerName: yup.string().required("Customer Name Required!").min(4,"Min 4 characters") ,
+//                 Phone: yup.string().required("Phone no required").matches(/\+91\d{10}/,"Invalid Mobile")
+//             })}
+//             onSubmit={(values)=>{
+//                 JSON.stringify(values)
+//             }}
+//             >
+//                 <Form>
+//                   <dl>
+//                     <dt>Customer Name</dt>
+//                     <dd> <Field type="text" name="CustomerName" /> </dd>
+//                     <dd className="text-danger"> <ErrorMessage name="CustomerName" /></dd>
+//                     <dt>Mobile</dt>
+//                     <dd><Field type="text" name="Phone" /></dd>
+//                     <dd className="text-danger"><ErrorMessage name="Phone" /></dd>
+//                   </dl>
+//                   <button className="btn btn-primary">Register</button>
+//                 </Form>
+//             </Formik>
+//         </div>
+//     )
+// }
+
+// Formik form State Validation Demo
+
 export function FormDemo() {
     return (
         <div className="container-fluid">
             <h2>Register User</h2>
             <Formik 
-            initialValues={{CustomerName: '',Phone: ''}}
+            initialValues={{CustomerName: 'John',Phone: ''}}
             validationSchema={yup.object({
                 CustomerName: yup.string().required("Customer Name Required!").min(4,"Min 4 characters") ,
                 Phone: yup.string().required("Phone no required").matches(/\+91\d{10}/,"Invalid Mobile")
@@ -155,20 +187,21 @@ export function FormDemo() {
                 JSON.stringify(values)
             }}
             >
-                <Form>
-                  <dl>
-                    <dt>Customer Name</dt>
-                    <dd> <Field type="text" name="CustomerName" /> </dd>
-                    <dd className="text-danger"> <ErrorMessage name="CustomerName" /></dd>
-                    <dt>Mobile</dt>
-                    <dd><Field type="text" name="Phone" /></dd>
-                    <dd className="text-danger"><ErrorMessage name="Phone" /></dd>
-                  </dl>
-                  <button className="btn btn-primary">Register</button>
-                </Form>
+                {
+                    formik=><Form>
+                    <dl>
+                      <dt>Customer Name</dt>
+                      <dd> <Field type="text" name="CustomerName" /> </dd>
+                      <dd className="text-danger"> <ErrorMessage name="CustomerName" /></dd>
+                      <dt>Mobile</dt>
+                      <dd><Field type="text" name="Phone" /></dd>
+                      <dd className="text-danger"><ErrorMessage name="Phone" /></dd>
+                    </dl>
+                    <button disabled={!formik.isValid} className="btn btn-primary">Register</button>
+                    <button className={`btn btn-success ms-2 ${(formik.dirty)?"d-inline":"d-none"}`}>Save</button>
+                  </Form>
+                }
             </Formik>
         </div>
     )
 }
-
-// Formik form State Validation Demo
