@@ -1,4 +1,5 @@
 import {useForm} from "react-hook-form";
+import { NavBar } from "../../component-library/navbar";
 
 export function HookForm() {
     const {register, handleSubmit, formState:{errors}} = useForm();
@@ -7,6 +8,9 @@ export function HookForm() {
     }
     return (
         <div className="container-fluid">
+            <NavBar BrandName="Shopper" MenuItems={["Home", "Shop", "Blog", "Pages", "Docs"]} ThemeName="bg-dark text-white" />
+            <NavBar BrandName="NKB Blocks" MenuItems={["Home", "Services", "Nym","Jackal"]} ThemeName="bg-success" />
+            <NavBar BrandName="NKB Nodes" MenuItems={["Home", "Services", "Nym","Jackal"]} ThemeName="bg-warning" />
             <h2>Register</h2>
             <form onSubmit={handleSubmit(submit)}>
                 <dl>
