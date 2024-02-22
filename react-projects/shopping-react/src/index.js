@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import $ from "jquery";
 import "./index.css";
+import "./components/login/login.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-// import Login from "./components/login/login";
+import Login from "./components/login/login";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import * as bootstrap from "bootstrap";
@@ -16,7 +17,6 @@ import { EventDemo } from "./components/event-demo/event-demo";
 import { TimerDemo } from "./components/timer-demo/time-demo";
 import { SlideShow } from "./components/slide-show/slide-show";
 import { FormDemo } from "./components/form-demo/form-demo";
-import { HookForm } from "./components/hook-form/hook-form";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
