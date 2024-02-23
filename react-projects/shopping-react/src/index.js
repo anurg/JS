@@ -18,11 +18,12 @@ import { TimerDemo } from "./components/timer-demo/time-demo";
 import { SlideShow } from "./components/slide-show/slide-show";
 import { FormDemo } from "./components/form-demo/form-demo";
 import { HookForm } from "./components/hook-form/hook-form";
+import { CustomDemo } from "./components/custom-demo/custom-demo";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <HookForm/>
+    <CustomDemo/>
   </React.StrictMode>
 );
 
