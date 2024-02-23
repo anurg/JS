@@ -1,7 +1,7 @@
 
 export function ReactGrid(props) {
     return (
-        <table className="table table-hover caption-top">
+        <table className={`table table-hover caption-top ${props.theme}`}>
             <caption>{props.caption}</caption>
             <thead>
                 {
