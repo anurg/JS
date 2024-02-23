@@ -1,6 +1,6 @@
 import "./login.css";
 
-export default function Login() {
+export  function Login() {
   return (
     <div>
       <header className="mt-3">
