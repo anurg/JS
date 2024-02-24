@@ -5,11 +5,11 @@ import "./index.css";
 import "./components/login/login.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Login from "./components/login/login";
+import { Login } from "./components/login/login";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import * as bootstrap from "bootstrap";
-import { DataBinding } from "./components/data-binding/data-binding";
+// import { DataBinding } from "./components/data-binding/data-binding";
 import { NasaAPI } from "./components/nasa-api/nasa-api";
 import { TwoWayBinding } from "./components/two-way-binding/two-way-binding";
 import { StyleDemo } from "./components/style-demo/style-demo";
@@ -23,7 +23,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <CustomDemo/>
+    <CustomDemo />
   </React.StrictMode>
 );
 

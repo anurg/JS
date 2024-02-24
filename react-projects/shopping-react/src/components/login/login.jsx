@@ -1,6 +1,8 @@
 import "./login.css";
+import { useCaptcha } from "../../hooks/captcha";
 
-export  function Login() {
+export function Login() {
+  const code = useCaptcha();
   return (
     <div>
       <header className="mt-3">
@@ -33,6 +35,8 @@ export  function Login() {
             <dd>
               <input type="password" className="form-control" />
             </dd>
+            <dt>Verify Yourself</dt>
+            <dd>{code}</dd>
           </dl>
           <button className="btn btn-warning w-100">Login</button>
         </form>

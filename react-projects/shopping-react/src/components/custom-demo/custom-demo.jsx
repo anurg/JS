@@ -1,7 +1,8 @@
-import { ReactGrid } from "../../component-library/react-grid";
-import { useState } from "react";
-import { Login } from "../login/login"
-import { Register } from "../register/register";
+// import { ReactGrid } from "../../component-library/react-grid";
+// import { useState } from "react";
+// import { Login } from "../login/login";
+// import { Register } from "../register/register";
+import { useAPI } from "../../hooks/api-hook";
 // export function CustomDemo() {
 //     return (
 //         <div className="container-fluid">
@@ -36,23 +37,51 @@ import { Register } from "../register/register";
 //     );
 // }
 
+// export function CustomDemo() {
+//         const [component, setComponent] =useState("");
+
+//         function handleLoginClick() {
+//             setComponent(<Login />);
+//         }
+//         function handleRegisterClick() {
+//             setComponent(<Register />);
+//         }
+//         return (
+//             <div className="container-fluid">
+//                 <h2>Home</h2>
+//                 <button onClick={handleLoginClick}>Login</button>
+//                 <button onClick={handleRegisterClick}>Register</button>
+//                 <div className="mt-3">
+//                     {component}
+//                 </div>
+//             </div>
+//         );
+//     }
+
+// UseAPI hook Demo
 export function CustomDemo() {
-        const [component, setComponent] =useState("");
-        
-        function handleLoginClick() {
-            setComponent(<Login />);
-        }
-        function handleRegisterClick() {
-            setComponent(<Register />);
-        }
-        return (
-            <div className="container-fluid">
-                <h2>Home</h2>
-                <button onClick={handleLoginClick}>Login</button>
-                <button onClick={handleRegisterClick}>Register</button>
-                <div className="mt-3">
-                    {component}
-                </div>
-            </div>
-        );
-    }
+  const categories = useAPI("https://fakestoreapi.com/products/categories");
+  console.log(categories);
+  return (
+    <div className="container-fluid">
+      <ol>
+        {categories.map((category) => (
+          <li key={category}>{category}</li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+// export function CustomDemo() {
+//   let products = useAPI("http://fakestoreapi.com/products");
+//   return (
+//     <div className="container-fluid">
+//       <ol>
+//         {products.map((product) => (
+//           <li key={product.id}>{product.title}</li>
+//         ))}
+//       </ol>
+//     </div>
+//   );
+// }
