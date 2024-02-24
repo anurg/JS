@@ -19,11 +19,12 @@ import { SlideShow } from "./components/slide-show/slide-show";
 import { FormDemo } from "./components/form-demo/form-demo";
 import { HookForm } from "./components/hook-form/hook-form";
 import { CustomDemo } from "./components/custom-demo/custom-demo";
+import { ContextDemo } from "./components/context-demo/context-demo";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <CustomDemo />
+    <ContextDemo />
   </React.StrictMode>
 );
 
